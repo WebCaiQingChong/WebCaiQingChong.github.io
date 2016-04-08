@@ -1645,50 +1645,17 @@ pre .css ~ * .id {
   width: 100%;
   color: #f87541;
   padding: 0.06rem 0;
-  background: -webkit--webkit-linear-gradient(left, rgba(0,0,0,0.1) 10%, #ff0, rgba(0,0,0,0.1) 40%) repeat-x #f87541;
-  background: -webkit--moz-linear-gradient(left, rgba(0,0,0,0.1) 10%, #ff0, rgba(0,0,0,0.1) 40%) repeat-x #f87541;
-  background: -webkit--ms-linear-gradient(left, rgba(0,0,0,0.1) 10%, #ff0, rgba(0,0,0,0.1) 40%) repeat-x #f87541;
-  background: -webkit-linear-gradient(to right, rgba(0,0,0,0.1) 10%, #ff0, rgba(0,0,0,0.1) 40%) repeat-x #f87541;
+  background: -webkit-linear-gradient(left, rgba(0,0,0,0.1) 10%, #ff0, rgba(0,0,0,0.1) 40%) repeat-x #f87541;
+  background: -moz-linear-gradient(left, rgba(0,0,0,0.1) 10%, #ff0, rgba(0,0,0,0.1) 40%) repeat-x #f87541;
+  background: -ms-linear-gradient(left, rgba(0,0,0,0.1) 10%, #ff0, rgba(0,0,0,0.1) 40%) repeat-x #f87541;
+  background: linear-gradient(to right, rgba(0,0,0,0.1) 10%, #ff0, rgba(0,0,0,0.1) 40%) repeat-x #f87541;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -o-background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  -o-text-fill-color: transparent;
   text-fill-color: transparent;
-  -webkit-animation: cliptext 4s linear infinite;
-  -moz-animation: cliptext 4s linear infinite;
-  -o-animation: cliptext 4s linear infinite;
   -webkit-animation: cliptext 4s linear infinite;
   -moz-animation: cliptext 4s linear infinite;
   -ms-animation: cliptext 4s linear infinite;
   animation: cliptext 4s linear infinite;
   text-transform: uppercase;
-}
-@-webkit-keyframes cliptext {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 3.75rem 0;
-  }
-}
-@-moz-keyframes cliptext {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 3.75rem 0;
-  }
-}
-@-o-keyframes cliptext {
-  0% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 3.75rem 0;
-  }
 }
 .footer-right {
   float: right;
