@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: 脚本天堂 | 爬呀爬呀爬呀爬</title>
+  <title>javascript数组 | 爬呀爬呀爬呀爬</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="爬呀爬呀爬呀爬">
-<meta property="og:url" content="http://yoursite.com/tags/脚本天堂/index.html">
+  <meta name="description" content="数组的几种方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript数组">
+<meta property="og:url" content="http://yoursite.com/2016/04/19/javascript数组/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
-<meta property="og:description">
+<meta property="og:description" content="数组的几种方法">
+<meta property="og:updated_time" content="2016-04-19T08:39:57.287Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爬呀爬呀爬呀爬">
-<meta name="twitter:description">
+<meta name="twitter:title" content="javascript数组">
+<meta name="twitter:description" content="数组的几种方法">
   
     <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
   
@@ -204,84 +205,104 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-javascript数组" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/19/javascript数组/" class="archive-article-date">
-  	<time datetime="2016-04-19T02:45:26.000Z" itemprop="datePublished">Apr 19</time>
+    <div class="article-meta">
+      <a href="/2016/04/19/javascript数组/" class="article-date">
+  	<time datetime="2016-04-19T02:45:26.000Z" itemprop="datePublished">2016-04-19</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/19/javascript数组/">javascript数组</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript数组
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/脚本天堂/">脚本天堂</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
+      </div>
+      
     
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/04/08/js-变量提升/" class="archive-article-date">
-  	<time datetime="2016-04-08T03:02:14.000Z" itemprop="datePublished">Apr 8</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/04/08/js-变量提升/">js-变量提升</a>
-    </h1>
-  
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>数组的几种方法<br><a id="more"></a></p>
+<p>###join()<br>    Array.join()方法将数组中所有元素都转化为字符串并连接在一起，返回最后生成的字符串。可以指定一个可选的字符串在生成的字符串中来分隔数组的各个元素，如不指定的话，默认为”,”<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> array = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];    <span class="comment">//创建数组</span></span><br><span class="line">a.join();                     <span class="comment">//生成"1,2,3,4,5,6"</span></span><br><span class="line">a.join(<span class="string">" "</span>)                   <span class="comment">//中间传入一个空格，生成"1 2 3 4 5 6"</span></span><br><span class="line">a.join(<span class="string">""</span>);                   <span class="comment">//传入空值，生成"123456"</span></span><br></pre></td></tr></table></figure></p>
+<p>###reverse()<br>    Array.reverse()方法将数组中的元素颠倒顺序，返回逆序的数组，采取替换。它不通过重新排列的元素创建新的数组，而是在原先的数组中重新排列它们。</p>
+<p>###sort()<br>    Array.sort()方法将数组中的元素排序并返回排序后的数组。当不带参数调用sort()时，数组元素以字母表顺序排序。如果包含undefined元素，它们会被排到数组的尾部。<br>```javascript<br>    var a = [33,4,1111,222];<br>        a.sort();                      //字母表顺序： 1111,222,33,4<br>        //给sort()方法里面传入比较函数，根据数值进行排序<br>        a.sort(function(a,b){<br>            return a-b;                //根据顺序，返回负数、0、正数<br>        });                            //数值顺序： 4,33,222,1111<br>        a.sort(function(){<br>            return b-a;                //数值逆序： 1111,222,33,4<br>        });</p>
+<pre><code>var b = [&apos;ant&apos;,&apos;Bug&apos;,&apos;cat&apos;,&apos;Dog&apos;];
+    b.sort();                      //区分大小写的排序：[&apos;Bug&apos;,&apos;Dog&apos;,&apos;ant&apos;,&apos;cat&apos;]
+    b.sort(funciton(s,t){
+        var a = s.toLowerCase();
+        var b = t.toLowerCase();
+        if(a&lt;b) return -1;
+        if(a&gt;b) return 1;
+        return 0
+    });                            // [&apos;ant&apos;,&apos;Bug&apos;,&apos;cat&apos;,&apos;Dog&apos;]
+</code></pre><p>###concat()<br>    Array.concat()方法创建并返回一个新数组，它的元素包括调用concat()的原始数组的元素和concat()的每个参数。如果这些参数的任何一个自身是数组，则链接的是数组的元素，而非数组本身。<br>    但是，concat()不会递归扁平化数组的数组。concat()也不会修改调用的数组。<br>```javascript<br>    var a = [1,2,3];<br>    a.concat(4,5);                     // 返回: [1,2,3,4,5]  直接连接<br>    a.concat([4,5]);                   // 返回：[1,2,3,4,5]  连接数组中的元素<br>    a.concat([4,5],[6,7]);             // 返回: [1,2,3,4,5,6,7] 连接数组中的元素<br>    a.concat(4,[5,[6,7]]);             // 返回: [1,2,3,4,5,[6,7]]  不会递归扁平化数组的数组</p>
+<p>###slice()<br>    Array.slice()方法返回指定数组的一个片段或子数组.它的两个参数分别指定了片段的开始和结束的位置。返回的数组包含第一个参数指定的位置和所有到但不包含第二个参数指定的位置之间的所有数组元素。<br>    如果就指定了一个参数，返回的数组将包含从开始位置到数组结尾的所有元素。<br>    如果参数中出现负数，它表示相对于数组中最后一个元素的位置.<br>    例子就不写了.这个更多的应该是自己去写一下,才能有更深刻的体会.<br>    纸上得来终觉浅,绝知此事要躬行.</p>
+<p>###splice()<br>    Array.splice()方法是在数组中插入或删除元素的通用方法。</p>
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/脚本天堂/">脚本天堂</a></li></ul>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/04/08/圆环进度条/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">圆环进度条</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
 	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -307,9 +328,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
