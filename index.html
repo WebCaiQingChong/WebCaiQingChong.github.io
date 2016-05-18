@@ -236,16 +236,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>在ES5中，字符串的行为类似于只读的数组。
-&lt;!--more--&gt;
-</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = test;</span><br><span class="line">s.charAt(<span class="number">0</span>);         <span class="comment">// =&gt; 't'</span></span><br><span class="line">s[<span class="number">1</span>]                 <span class="comment">// =&gt; 'e'</span></span><br></pre></td></tr></table></figure>
-<pre><code>但是针对字符串的typeof操作符仍然返回“string”,如果给Array.isArray()传递字符串，它将返回false.
-可索引的字符串的最大好处就是简单，用方括号代替charAt()调用，这样更加简洁，可读并且可能更高效。
-
-#####注意
-字符串是不可变值，故当把它们作为数组看待时，它们是只读的。如push()、sort()、reverse()和splice()等数组方法会修改数组，它们在字符串上是无效的。
-不仅如此，使用数组方法来修改字符串会导致错误：出错的时候没有提示。
-</code></pre>
+        <p>作为数组的字符串<br>
       
     </div>
     
@@ -258,6 +249,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/18/js-作为数组的字符串/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>

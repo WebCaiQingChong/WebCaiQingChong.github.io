@@ -6,28 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>js-作为数组的字符串 | 爬呀爬呀爬呀爬</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在ES5中，字符串的行为类似于只读的数组。
-&amp;lt;!--more--&amp;gt;
-123var s = test;s.charAt(0);         // =&amp;gt; &apos;t&apos;s[1]                 // =&amp;gt; &apos;e&apos;
-但是针对字符串的typeof操作符仍然返回“string”,如果给Array.isArray()传递字符串，它将返回false.
-可索引的字符串的最大好处">
+  <meta name="description" content="作为数组的字符串">
 <meta property="og:type" content="article">
 <meta property="og:title" content="js-作为数组的字符串">
 <meta property="og:url" content="http://yoursite.com/2016/05/18/js-作为数组的字符串/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
-<meta property="og:description" content="在ES5中，字符串的行为类似于只读的数组。
-&amp;lt;!--more--&amp;gt;
-123var s = test;s.charAt(0);         // =&amp;gt; &apos;t&apos;s[1]                 // =&amp;gt; &apos;e&apos;
-但是针对字符串的typeof操作符仍然返回“string”,如果给Array.isArray()传递字符串，它将返回false.
-可索引的字符串的最大好处">
-<meta property="og:updated_time" content="2016-05-18T02:14:44.031Z">
+<meta property="og:description" content="作为数组的字符串">
+<meta property="og:updated_time" content="2016-05-18T02:16:08.893Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js-作为数组的字符串">
-<meta name="twitter:description" content="在ES5中，字符串的行为类似于只读的数组。
-&amp;lt;!--more--&amp;gt;
-123var s = test;s.charAt(0);         // =&amp;gt; &apos;t&apos;s[1]                 // =&amp;gt; &apos;e&apos;
-但是针对字符串的typeof操作符仍然返回“string”,如果给Array.isArray()传递字符串，它将返回false.
-可索引的字符串的最大好处">
+<meta name="twitter:description" content="作为数组的字符串">
   
     <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
   
@@ -258,9 +246,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <pre><code>在ES5中，字符串的行为类似于只读的数组。
-&lt;!--more--&gt;
-</code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = test;</span><br><span class="line">s.charAt(<span class="number">0</span>);         <span class="comment">// =&gt; 't'</span></span><br><span class="line">s[<span class="number">1</span>]                 <span class="comment">// =&gt; 'e'</span></span><br></pre></td></tr></table></figure>
+        <p>作为数组的字符串<br><a id="more"></a><br>在ES5中，字符串的行为类似于只读的数组。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = test;</span><br><span class="line">s.charAt(<span class="number">0</span>);         <span class="comment">// =&gt; 't'</span></span><br><span class="line">s[<span class="number">1</span>]                 <span class="comment">// =&gt; 'e'</span></span><br></pre></td></tr></table></figure></p>
 <pre><code>但是针对字符串的typeof操作符仍然返回“string”,如果给Array.isArray()传递字符串，它将返回false.
 可索引的字符串的最大好处就是简单，用方括号代替charAt()调用，这样更加简洁，可读并且可能更高效。
 
