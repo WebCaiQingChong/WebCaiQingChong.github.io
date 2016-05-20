@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/04/19/js-数组/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
 <meta property="og:description" content="数组的几种方法">
-<meta property="og:updated_time" content="2016-04-20T08:36:18.585Z">
+<meta property="og:updated_time" content="2016-05-20T02:09:18.631Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js-数组">
 <meta name="twitter:description" content="数组的几种方法">
@@ -270,7 +270,7 @@ splice()的前两个参数指定了需要删除的数组元素。紧随其后的
 <h3 id="unshift-和shift"><a href="#unshift-和shift" class="headerlink" title="unshift()和shift()"></a>unshift()和shift()</h3><pre><code>unshift()和shift()类似push()和pop(),不一样的是前者是在数组的头部进行操作的。至于其他的，就请小伙伴自行脑补了。
 ####思考？？
 当使用多个参数调用unshift()时，会出现怎么样的行为呢？
-</code></pre><h3 id="toString-和toLocaleString"><a href="#toString-和toLocaleString" class="headerlink" title="toString()和toLocaleString()"></a>toString()和toLocaleString()</h3><pre><code>toString()方法将数组中的每个元素转化成字符串，并且输出用逗号粉盒的字符串列表。
+</code></pre><h3 id="toString-和toLocaleString"><a href="#toString-和toLocaleString" class="headerlink" title="toString()和toLocaleString()"></a>toString()和toLocaleString()</h3><pre><code>toString()方法将数组中的每个元素转化成字符串，并且输出用逗号分隔的字符串列表。
 注意，输出不包括方括号或其他形式的包裹数组值的分隔符。
 </code></pre><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>].toString();                  <span class="comment">//生成'1,2,3'</span></span><br><span class="line">[<span class="string">"a"</span>,<span class="string">"b"</span>,<span class="string">"c"</span>].toString();            <span class="comment">//生成'a,b,c'</span></span><br><span class="line">[<span class="number">1</span>,[<span class="number">2</span>,<span class="string">'c'</span>]].toString();              <span class="comment">//生成'1,2,c'</span></span><br></pre></td></tr></table></figure>
 <pre><code>toLocaleString()是toString()方法的本地化版本。它调用元素的toLocaleString()方法将每个数组元素转化为字符串，并且使用本地化（和自定义实现的）分割符将这些字符串连接起来生成最终的字符串。
