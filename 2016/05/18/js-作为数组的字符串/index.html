@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/18/js-作为数组的字符串/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
 <meta property="og:description" content="作为数组的字符串">
-<meta property="og:updated_time" content="2016-05-18T02:16:08.893Z">
+<meta property="og:updated_time" content="2016-06-27T05:29:34.908Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="js-作为数组的字符串">
 <meta name="twitter:description" content="作为数组的字符串">
@@ -125,7 +125,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/样式天地/" style="font-size: 10px;">样式天地</a> <a href="/tags/脚本天堂/" style="font-size: 20px;">脚本天堂</a>
+						<a href="/tags/css/" style="font-size: 20px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/样式天地/" style="font-size: 10px;">样式天地</a> <a href="/tags/脚本天堂/" style="font-size: 20px;">脚本天堂</a>
 					</div>
 				</section>
 				
@@ -247,13 +247,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>作为数组的字符串<br><a id="more"></a><br>在ES5中，字符串的行为类似于只读的数组。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = test;</span><br><span class="line">s.charAt(<span class="number">0</span>);         <span class="comment">// =&gt; 't'</span></span><br><span class="line">s[<span class="number">1</span>]                 <span class="comment">// =&gt; 'e'</span></span><br></pre></td></tr></table></figure></p>
-<pre><code>但是针对字符串的typeof操作符仍然返回“string”,如果给Array.isArray()传递字符串，它将返回false.
-可索引的字符串的最大好处就是简单，用方括号代替charAt()调用，这样更加简洁，可读并且可能更高效。
+<p>但是针对字符串的typeof操作符仍然返回“string”,如果给Array.isArray()传递字符串，它将返回false.<br>可索引的字符串的最大好处就是简单，用方括号代替charAt()调用，这样更加简洁，可读并且可能更高效。</p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p>字符串是不可变值，故当把它们作为数组看待时，它们是只读的。如push()、sort()、reverse()和splice()等数组方法会修改数组，它们在字符串上是无效的。不仅如此，使用数组方法来修改字符串会导致错误：出错的时候没有提示。</p>
 
-#####注意
-字符串是不可变值，故当把它们作为数组看待时，它们是只读的。如push()、sort()、reverse()和splice()等数组方法会修改数组，它们在字符串上是无效的。
-不仅如此，使用数组方法来修改字符串会导致错误：出错的时候没有提示。
-</code></pre>
       
     </div>
     
@@ -262,11 +258,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/20/九宫格布局/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/05/20/评星-css/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          九宫格布局
+          评星--css
         
       </div>
     </a>
