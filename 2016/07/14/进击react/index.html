@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>进击react @ PropTypes | 爬呀爬呀爬呀爬</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="新的一个微信项目，打算采用react做spa开发(单页应用)，本来之前对它也是比较感兴趣了，就来分享一些学习过程中的磕磕绊绊，希望可以给大家带来一些灵感。刚开始为过程中的细节描述，等项目完成，再来分享一些具体的思路（毕竟虫子我刚开始）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="进击react @ PropTypes">
+<meta property="og:url" content="http://yoursite.com/2016/07/14/进击react/index.html">
+<meta property="og:site_name" content="爬呀爬呀爬呀爬">
+<meta property="og:description" content="新的一个微信项目，打算采用react做spa开发(单页应用)，本来之前对它也是比较感兴趣了，就来分享一些学习过程中的磕磕绊绊，希望可以给大家带来一些灵感。刚开始为过程中的细节描述，等项目完成，再来分享一些具体的思路（毕竟虫子我刚开始）">
+<meta property="og:updated_time" content="2016-07-19T03:31:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="进击react @ PropTypes">
+<meta name="twitter:description" content="新的一个微信项目，打算采用react做spa开发(单页应用)，本来之前对它也是比较感兴趣了，就来分享一些学习过程中的磕磕绊绊，希望可以给大家带来一些灵感。刚开始为过程中的细节描述，等项目完成，再来分享一些具体的思路（毕竟虫子我刚开始）">
+  
+    <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xsqnr.com2.z0.glb.clouddn.com/title.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Web菜青虫</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/tags/样式天地">样式天地</a></li>
+				        
+							<li><a href="/tags/类库插件">类库插件</a></li>
+				        
+							<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+				        
+							<li><a href="/tags/文从心动">文从心动</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/jquery/" style="font-size: 10px;">jquery</a> <a href="/tags/样式天地/" style="font-size: 10px;">样式天地</a> <a href="/tags/类库插件/" style="font-size: 10px;">类库插件</a> <a href="/tags/脚本天堂/" style="font-size: 15px;">脚本天堂</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.52cik.com/">楼教主</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://springxiege.github.io/">心情</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">纵使道路崎岖坎坷，我亦保持本心，勇往直前</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Web菜青虫</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Web菜青虫</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/样式天地">样式天地</a></li>
+		        
+					<li><a href="/tags/类库插件">类库插件</a></li>
+		        
+					<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+		        
+					<li><a href="/tags/文从心动">文从心动</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-进击react" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/07/14/进击react/" class="article-date">
+  	<time datetime="2016-07-14T08:18:47.000Z" itemprop="datePublished">2016-07-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      进击react @ PropTypes
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类库插件/">类库插件</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>新的一个微信项目，打算采用react做spa开发(单页应用)，本来之前对它也是比较感兴趣了，就来分享一些学习过程中的磕磕绊绊，希望可以给大家带来一些灵感。刚开始为过程中的细节描述，等项目完成，再来分享一些具体的思路（毕竟虫子我刚开始）<br><a id="more"></a><br>React中PropTypes的使用方法<br>在react-redux官网提供的实例TodoList中，会经常看到这样的代码，根据字面意思，相信大家都是知道的，但是还是有提一下的必要<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> React,&#123;PropTypes&#125; <span class="keyword">from</span> <span class="string">'react'</span></span><br><span class="line"><span class="keyword">const</span> Link = (&#123;active,children,onClick&#125;) =&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span>(active)&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;children&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">        <span class="xml"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span></span><br><span class="line">           <span class="attr">onclick</span>= <span class="string">&#123;e</span> =&gt;</span> &#123;</span><br><span class="line">               e.preventDefault();</span><br><span class="line">               onClick();</span><br><span class="line">           &#125;&#125;</span><br><span class="line">        &gt;</span><br><span class="line">            &#123;children&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line">    )</span><br><span class="line">&#125;;</span><br><span class="line">Link.propTypes = &#123;</span><br><span class="line">    active: PropTypes.bool.isRequired,</span><br><span class="line">    children: PropTypes.node.isRequired,</span><br><span class="line">    onClick: PropTypes.func.isRequired</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> Link</span><br></pre></td></tr></table></figure></p>
+<p>从字面的来看，类型，必须的，其余的就是中间的那几个东西。这些是用来规范组件的类型，如果没有引入对应的类型，在控制台是有警告提示<br>下面是PropTypes的种类<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">React.PropTypes.array           <span class="comment">// 数组</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.bool.isRequired <span class="comment">// Boolean 且必要。</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.func            <span class="comment">// 函数</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.number          <span class="comment">// 数字</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.object          <span class="comment">// 对象</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.string          <span class="comment">// 字符串</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.node            <span class="comment">// 任何类型的: numbers, strings, elements 或者任何这种类型的数组</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.element         <span class="comment">// React 元素</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.instanceOf(XXX) <span class="comment">// 某种XXX类型的对象</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.oneOf([<span class="string">'foo'</span>, <span class="string">'bar'</span>]) <span class="comment">// 其中一个字符串</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.oneOfType([React.PropTypes.string, React.PropTypes.array]) <span class="comment">// 其中一种格式类型</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.arrayOf(React.PropTypes.string)  <span class="comment">// 某种类型的数组（字符串类型）</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.objectOf(React.PropTypes.string) <span class="comment">// 具有某种属性类型的对象（字符串类型）</span></span><br><span class="line"></span><br><span class="line">React.PropTypes.shape(&#123;                          <span class="comment">// 是否符合指定格式的</span></span><br><span class="line"></span><br><span class="line">  color: React.PropTypes.string,</span><br><span class="line">  fontSize: React.PropTypes.number</span><br><span class="line">&#125;);</span><br><span class="line">React.PropTypes.any.isRequired  <span class="comment">// 可以是任何格式，且必要。</span></span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/06/27/评星-css/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">评星--css</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Web菜青虫
+    	</div>
+      	<div class="footer-right">
+      		一只爬行在前端道路上的菜青虫
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
