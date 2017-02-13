@@ -2324,3 +2324,6 @@ pre .css ~ * .id {
   height: 100%;
   overflow: hidden;
 }
+.switch-friends-link {
+  display: block !important;
+}
