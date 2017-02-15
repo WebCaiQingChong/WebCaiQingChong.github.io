@@ -4,18 +4,20 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>js-变量提升 | 爬呀爬呀爬呀爬</title>
+  <title>九宫格布局 | 爬呀爬呀爬呀爬</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="函数作用域和声明提前">
+  <meta name="description" content="一道很好玩的面试题">
 <meta property="og:type" content="article">
-<meta property="og:title" content="js-变量提升">
-<meta property="og:url" content="http://yoursite.com/2016/04/08/js-变量提升/index.html">
+<meta property="og:title" content="九宫格布局">
+<meta property="og:url" content="http://yoursite.com/2016/05/20/九宫格布局/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
-<meta property="og:description" content="函数作用域和声明提前">
-<meta property="og:updated_time" content="2016-04-08T05:20:04.000Z">
+<meta property="og:description" content="一道很好玩的面试题">
+<meta property="og:image" content="http://7xsqnr.com1.z0.glb.clouddn.com/jiu.jpg">
+<meta property="og:updated_time" content="2017-02-15T02:06:20.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="js-变量提升">
-<meta name="twitter:description" content="函数作用域和声明提前">
+<meta name="twitter:title" content="九宫格布局">
+<meta name="twitter:description" content="一道很好玩的面试题">
+<meta name="twitter:image" content="http://7xsqnr.com1.z0.glb.clouddn.com/jiu.jpg">
   
     <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
   
@@ -217,11 +219,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-js-变量提升" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-九宫格布局" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/04/08/js-变量提升/" class="article-date">
-  	<time datetime="2016-04-08T03:02:14.000Z" itemprop="datePublished">2016-04-08</time>
+      <a href="/2016/05/20/九宫格布局/" class="article-date">
+  	<time datetime="2016-05-20T07:27:02.000Z" itemprop="datePublished">2016-05-20</time>
 </a>
     </div>
   
@@ -234,7 +236,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      js-变量提升
+      九宫格布局
     </h1>
   
 
@@ -243,7 +245,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/脚本天堂/">脚本天堂</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/样式天地/">样式天地</a></li></ul>
 	</div>
 
         
@@ -254,9 +256,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>函数作用域和声明提前<br><a id="more"></a><br>　　这是一个例子，刚开始看的时候，觉得自己一眼就知道怎么回事，自己敲了之后发现，结果并不是那样。或许其他的小伙伴们也会遇到这样的问题吧。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">　　<span class="keyword">var</span> a =<span class="string">'123'</span>;</span><br><span class="line">　　f();</span><br><span class="line">　　<span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">　　　　alert(a);</span><br><span class="line">　　　　<span class="keyword">var</span> a = <span class="string">'456'</span>;</span><br><span class="line">　　　　alert(a);</span><br><span class="line">　　&#125;</span><br></pre></td></tr></table></figure></p>
-<p>　　结果会是什么呢？可能很多小伙伴都会认为，第一次弹出 123，第二次弹出456.当然如果答案是这样的话，写这个就没必要了。大家不妨自己去敲一下代码就知道了。<br>　　答案：<br>　　　　第一次弹出undefined，第二次弹出456.<br>　　　　对于跟我一样js不好的小伙伴是否会大吃一惊呢？<br>　　　　js权威指南上是这样解释的：由于函数作用域的特性，局部变量在整个函数体始终是有定义的，也就是说，在函数体内局部变量遮盖了同名全局变量。尽管如此，只有在程序执行到var 语句的时候，局部变量才会被真正赋值。上述过程等价于<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">　　　　f();</span><br><span class="line">　　　　<span class="function"><span class="keyword">function</span> <span class="title">f</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">　　　　　　<span class="keyword">var</span>  a;</span><br><span class="line">　　　　　　alert(a);</span><br><span class="line">　　　　　　a = <span class="string">'456'</span>;</span><br><span class="line">　　　　　　alert(a);</span><br><span class="line">　　　　&#125;</span><br></pre></td></tr></table></figure></p>
-<p>　　　　我相信这样小伙伴们就应该能清楚的知道了。也问过其他的大神们，他们给出一个名词，变量提升。从字面上大致也可以理解，可能这样说更简单，更加的通俗易懂。</p>
+        <p>一道很好玩的面试题<br><a id="more"></a><br>    使用 HTML+CSS 实现如图布局，border-width:5px，格子大小是 50px*50px，hover时边框变成红色，需要考虑 IE6+ 和语义化的结构。<br>    <img src="http://7xsqnr.com1.z0.glb.clouddn.com/jiu.jpg" alt="九宫格布局图片"></p>
 
       
     </div>
@@ -266,15 +266,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/04/08/圆环进度条/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/06/27/评星-css/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          圆环进度条
+          评星--css
         
       </div>
     </a>
   
+  
+    <a href="/2016/05/18/js-作为数组的字符串/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">js-作为数组的字符串</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
