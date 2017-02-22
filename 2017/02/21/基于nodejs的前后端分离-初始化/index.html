@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>基于nodejs的前后端分离--初始化 | 爬呀爬呀爬呀爬</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="先把项目的基本架子搭起来,工欲善其事必先利其器!">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于nodejs的前后端分离--初始化">
+<meta property="og:url" content="http://yoursite.com/2017/02/21/基于nodejs的前后端分离-初始化/index.html">
+<meta property="og:site_name" content="爬呀爬呀爬呀爬">
+<meta property="og:description" content="先把项目的基本架子搭起来,工欲善其事必先利其器!">
+<meta property="og:updated_time" content="2017-02-22T02:41:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="基于nodejs的前后端分离--初始化">
+<meta name="twitter:description" content="先把项目的基本架子搭起来,工欲善其事必先利其器!">
+  
+    <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xsqnr.com2.z0.glb.clouddn.com/title.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Web菜青虫</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/tags/样式天地">样式天地</a></li>
+				        
+							<li><a href="/tags/类库插件">类库插件</a></li>
+				        
+							<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+				        
+							<li><a href="/tags/文从心动">文从心动</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/文从心动/" style="font-size: 10px;">文从心动</a> <a href="/tags/样式天地/" style="font-size: 15px;">样式天地</a> <a href="/tags/类库插件/" style="font-size: 12.5px;">类库插件</a> <a href="/tags/脚本天堂/" style="font-size: 17.5px;">脚本天堂</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.52cik.com/">楼教主</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://springxiege.github.io/">心情</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://imochen.com/">墨尘</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.barretlee.com/">小胡子哥</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/lvdabao/">吕大豹</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://annn.me/">安总</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">纵使道路崎岖坎坷，我亦保持本心，勇往直前</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Web菜青虫</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Web菜青虫</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/样式天地">样式天地</a></li>
+		        
+					<li><a href="/tags/类库插件">类库插件</a></li>
+		        
+					<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+		        
+					<li><a href="/tags/文从心动">文从心动</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-基于nodejs的前后端分离-初始化" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/02/21/基于nodejs的前后端分离-初始化/" class="article-date">
+  	<time datetime="2017-02-21T03:56:48.000Z" itemprop="datePublished">2017-02-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基于nodejs的前后端分离--初始化
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先把项目的基本架子搭起来,工欲善其事必先利其器!<br><a id="more"></a></p>
+<p>###目录结构<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">└── myapp</span><br><span class="line">    ├── app.js                  //入口文件</span><br><span class="line">    ├── bin</span><br><span class="line">    ├── common                  //公共方法</span><br><span class="line">    ├── config.js               //配置文件</span><br><span class="line">    ├── controllers             //C层</span><br><span class="line">    ├── middlewares             //自定义中间件</span><br><span class="line">    ├── node_modules            //依赖</span><br><span class="line">    ├── package.json            //不用多说这个东西了吧</span><br><span class="line">    ├── public                  //静态资源</span><br><span class="line">    ├── views                   //view层</span><br><span class="line">    └── web_router.js           //路由</span><br></pre></td></tr></table></figure></p>
+<p>###package.json<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;name&quot;: &quot;mzNode&quot;,</span><br><span class="line">  &quot;version&quot;: &quot;2.1.1&quot;,</span><br><span class="line">  &quot;private&quot;: true,</span><br><span class="line">  &quot;main&quot;: &quot;app.js&quot;,</span><br><span class="line">  &quot;description&quot;: &quot;A project base on NodeJs&quot;,</span><br><span class="line">  &quot;repository&quot;: &quot;&quot;,</span><br><span class="line">  &quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;async&quot;: &quot;1.5.2&quot;,</span><br><span class="line">    &quot;bcryptjs&quot;: &quot;2.3.0&quot;,</span><br><span class="line">    &quot;body-parser&quot;: &quot;1.15.0&quot;,</span><br><span class="line">    &quot;bytes&quot;: &quot;^2.2.0&quot;,</span><br><span class="line">    &quot;colors&quot;: &quot;1.1.2&quot;,</span><br><span class="line">    &quot;compression&quot;: &quot;1.6.1&quot;,</span><br><span class="line">    &quot;connect-busboy&quot;: &quot;0.0.2&quot;,</span><br><span class="line">    &quot;connect-redis&quot;: &quot;3.0.2&quot;,</span><br><span class="line">    &quot;cookie-parser&quot;: &quot;1.4.1&quot;,</span><br><span class="line">    &quot;cors&quot;: &quot;2.7.1&quot;,</span><br><span class="line">    &quot;csurf&quot;: &quot;1.8.3&quot;,</span><br><span class="line">    &quot;data2xml&quot;: &quot;1.2.4&quot;,</span><br><span class="line">    &quot;ejs-mate&quot;: &quot;2.3.0&quot;,</span><br><span class="line">    &quot;eventproxy&quot;: &quot;0.3.4&quot;,</span><br><span class="line">    &quot;express&quot;: &quot;4.14.0&quot;,</span><br><span class="line">    &quot;express-session&quot;: &quot;1.12.1&quot;,</span><br><span class="line">    &quot;helmet&quot;: &quot;1.3.0&quot;,</span><br><span class="line">    &quot;ioredis&quot;: &quot;1.15.1&quot;,</span><br><span class="line">    &quot;jpush-sdk&quot;: &quot;3.2.1&quot;,</span><br><span class="line">    &quot;loader&quot;: &quot;2.1.1&quot;,</span><br><span class="line">    &quot;loader-builder&quot;: &quot;2.4.1&quot;,</span><br><span class="line">    &quot;lodash&quot;: &quot;4.16.2&quot;,</span><br><span class="line">    &quot;log4js&quot;: &quot;^0.6.29&quot;,</span><br><span class="line">    &quot;markdown-it&quot;: &quot;6.0.0&quot;,</span><br><span class="line">    &quot;memory-cache&quot;: &quot;0.1.4&quot;,</span><br><span class="line">    &quot;method-override&quot;: &quot;2.3.5&quot;,</span><br><span class="line">    &quot;moment&quot;: &quot;2.15.2&quot;,</span><br><span class="line">    &quot;mongode&quot;: &quot;^0.1.6&quot;,</span><br><span class="line">    &quot;mongoose&quot;: &quot;4.4.9&quot;,</span><br><span class="line">    &quot;multiline&quot;: &quot;1.0.2&quot;,</span><br><span class="line">    &quot;node-uuid&quot;: &quot;1.4.7&quot;,</span><br><span class="line">    &quot;nodemailer&quot;: &quot;2.3.0&quot;,</span><br><span class="line">    &quot;nodemailer-smtp-transport&quot;: &quot;2.4.0&quot;,</span><br><span class="line">    &quot;oneapm&quot;: &quot;1.2.20&quot;,</span><br><span class="line">    &quot;passport&quot;: &quot;0.3.2&quot;,</span><br><span class="line">    &quot;passport-github&quot;: &quot;1.1.0&quot;,</span><br><span class="line">    &quot;pm2&quot;: &quot;1.1.1&quot;,</span><br><span class="line">    &quot;qn&quot;: &quot;1.1.1&quot;,</span><br><span class="line">    &quot;ready&quot;: &quot;0.1.1&quot;,</span><br><span class="line">    &quot;request&quot;: &quot;2.74.0&quot;,</span><br><span class="line">    &quot;response-time&quot;: &quot;2.3.1&quot;,</span><br><span class="line">    &quot;superagent&quot;: &quot;1.8.2&quot;,</span><br><span class="line">    &quot;utility&quot;: &quot;1.6.0&quot;,</span><br><span class="line">    &quot;validator&quot;: &quot;5.1.0&quot;,</span><br><span class="line">    &quot;xmlbuilder&quot;: &quot;7.0.0&quot;,</span><br><span class="line">    &quot;xss&quot;: &quot;0.2.10&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;devDependencies&quot;: &#123;</span><br><span class="line">    &quot;errorhandler&quot;: &quot;1.4.3&quot;,</span><br><span class="line">    &quot;express-layout&quot;: &quot;^0.1.0&quot;,</span><br><span class="line">    &quot;istanbul&quot;: &quot;0.4.2&quot;,</span><br><span class="line">    &quot;loader-connect&quot;: &quot;1.0.1&quot;,</span><br><span class="line">    &quot;mm&quot;: &quot;1.3.5&quot;,</span><br><span class="line">    &quot;mocha&quot;: &quot;2.4.5&quot;,</span><br><span class="line">    &quot;nock&quot;: &quot;7.5.0&quot;,</span><br><span class="line">    &quot;pedding&quot;: &quot;1.0.0&quot;,</span><br><span class="line">    &quot;redis&quot;: &quot;^2.6.5&quot;,</span><br><span class="line">    &quot;should&quot;: &quot;8.3.0&quot;,</span><br><span class="line">    &quot;supertest&quot;: &quot;1.2.0&quot;</span><br><span class="line">  &#125;,</span><br><span class="line">  &quot;scripts&quot;: &#123;</span><br><span class="line">    &quot;start&quot;: &quot;node ./app.js&quot;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>###启动程序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run start</span><br></pre></td></tr></table></figure></p>
+<p>在app.js 文件中指定的端口是9000,可以直接地址栏输入localhost:9000,我这里是nginx反向代理到本地,也只是当初问了尝试nginx</p>
+<p>###模板选择<br>app.js中可以引入app实例并设置模板引擎,因为使用的是express,默认的模板引擎是jade,但是个人不太喜欢那个模板,所以用了ejs,跟后台用的<br>freemarker有点类似。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">app.set(<span class="string">'views'</span>,path.join(__dirname,<span class="string">'views'</span>));</span><br><span class="line">app.set(<span class="string">'view engine'</span>,<span class="string">'html'</span>);</span><br><span class="line">app.engine(<span class="string">'html'</span>,<span class="built_in">require</span>(<span class="string">'ejs-mate'</span>));</span><br><span class="line"><span class="comment">// app.locals._layoutFile = 'layout.html';</span></span><br><span class="line">app.use(layout());   <span class="comment">//引入了layout模块,原来使用上面那句发现在模板使用的过程中有一个小bug,故引入该木块</span></span><br></pre></td></tr></table></figure></p>
+<p>###路由<br>在app.js中,添加了错误处理方法,以及404<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> webRouter = <span class="built_in">require</span>(<span class="string">'./web_router'</span>);</span><br><span class="line">app.use(errorPageMiddlewares.errorPage);</span><br><span class="line">app.use(<span class="string">'/'</span>,webRouter);</span><br><span class="line">app.use(<span class="string">'/*'</span>,<span class="function"><span class="keyword">function</span>(<span class="params">req,res</span>)</span>&#123;</span><br><span class="line">   <span class="keyword">if</span> (!res.headersSent) &#123;  <span class="comment">//这里也是个小坑,在后面进行解释</span></span><br><span class="line">      res.render404();</span><br><span class="line">   &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>为了让app.js稍微好点看,把路由这一块单独拉出去处理了。<br>web_router.js,只是为了搭建子,所以先随便定义了几个路由处理<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"><span class="keyword">var</span> site = <span class="built_in">require</span>(<span class="string">'./controllers/site'</span>);</span><br><span class="line"><span class="comment">//首页</span></span><br><span class="line">router.get(<span class="string">'/'</span>,site.index);</span><br><span class="line"><span class="comment">//列表</span></span><br><span class="line">router.get(<span class="string">'/list'</span>,site.list);</span><br><span class="line"><span class="comment">//安全中心</span></span><br><span class="line">router.get(<span class="string">'/safe'</span>,site.safe);</span><br><span class="line"><span class="comment">//个人中心</span></span><br><span class="line">router.get(<span class="string">'/user'</span>,site.user);</span><br></pre></td></tr></table></figure></p>
+<p>统一在C层进行路由控制,以及模板渲染</p>
+<p>###模板渲染<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">exports.list = <span class="function"><span class="keyword">function</span>(<span class="params">req,res,next</span>)</span>&#123;</span><br><span class="line">    res.render(<span class="string">'list'</span>,&#123;title:<span class="string">'投资列表'</span>,topic:&#123;title:<span class="string">'投资列表'</span>&#125;&#125;);</span><br><span class="line">    next();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>一个渲染的小例子,具体可参考官方文档,这样会更准确一点。</p>
+<p>###服务启动<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app.listen(config.port,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'app is running at 9000 port!'</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(<span class="string">'you can use Ctrl + C to stop it!'</span>);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这段代码,貌似真的没有多讲的,如有不懂,自行google。</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/15/jquery中attr()与prop()/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">jquery attr&amp;prop</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+
+
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Web菜青虫
+    	</div>
+      	<div class="footer-right">
+      		一只爬行在前端道路上的菜青虫
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
