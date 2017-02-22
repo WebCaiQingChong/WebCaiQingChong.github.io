@@ -4,17 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2017 | 爬呀爬呀爬呀爬</title>
+  <title>基于nodejs的前后端分离--需求 | 爬呀爬呀爬呀爬</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="爬呀爬呀爬呀爬">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+  <meta name="description" content="开始之前应该先说一下大致需求,遗忘掉了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于nodejs的前后端分离--需求">
+<meta property="og:url" content="http://yoursite.com/2017/02/22/基于nodejs的前后端分离-需求/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
-<meta property="og:description">
+<meta property="og:description" content="开始之前应该先说一下大致需求,遗忘掉了">
+<meta property="og:updated_time" content="2017-02-22T03:08:28.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爬呀爬呀爬呀爬">
-<meta name="twitter:description">
+<meta name="twitter:title" content="基于nodejs的前后端分离--需求">
+<meta name="twitter:description" content="开始之前应该先说一下大致需求,遗忘掉了">
   
     <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
   
@@ -216,177 +217,81 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-基于nodejs的前后端分离-需求" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/22/基于nodejs的前后端分离-需求/" class="archive-article-date">
-  	<time datetime="2017-02-22T02:46:54.000Z" itemprop="datePublished">Feb 22</time>
+    <div class="article-meta">
+      <a href="/2017/02/22/基于nodejs的前后端分离-需求/" class="article-date">
+  	<time datetime="2017-02-22T02:46:54.000Z" itemprop="datePublished">2017-02-22</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/22/基于nodejs的前后端分离-需求/">基于nodejs的前后端分离--需求</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基于nodejs的前后端分离--需求
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>开始之前应该先说一下大致需求,遗忘掉了<br><a id="more"></a><br>前后端的分离,可能应该有挺多种方式,可能我的这种方式抑或是需求会让前端同学更难受一点,毕竟对于我这么一个不懂后端的人来说,写C层真的是伤闹。</p>
+<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a><strong>需求</strong></h3><pre><code>1.路由控制
+2.模板渲染
+3.接口模拟
+4.请求代理
+</code></pre><p>我们的方案思路是,brower–&gt;nodejs–&gt;java 基于这种思路来看,java端负责提供数据接口,并以json格式来进行交流。</p>
+<p>也就是说,后台java现在只负责提供接口数据了,瞬间轻松不少,可苦逼的前端er,压力就大了不少。(ps:总监是否看我比较闲,就给我找点事情干呢?开个玩笑哈~~~)</p>
+<p>从koa和express两者之间,还是选择了express。个人觉得,koa里面已经很成型,功能健全,但是对于现状来说,可能学习成本有点高,而且我们的功能也相对较少,<br>所以选择了express。</p>
+<p>模板选择放弃了express自带的jade,因为对我这样的性格来说,没有个闭合标签什么的,总感觉是不完整的,再加上之前后台都是freemarker的模板,ejs与之相似,就选择了ejs。</p>
+<p>接口模拟方面,关于mock,额,原谅我知识不足,感觉好麻烦,就在安总的博客里面找到了imitator这个东西,感觉也是比较简单实用的。</p>
+<p>请求这一块,选择了github上star比较多的request,基本的用法跟平时类似。<br>关于异步的处理,自然是promiss了,本打算使用es6源生的Promiss,但是觉得貌似不是非常的好用,然后继续github,发现q的star好多,那就干脆尝试一下好了。</p>
+<p>这些也只是初步的一些猜想,在实践过程中,肯定会有不少的坑,而却对于我这个nojs的菜鸟来说,坑估计会更多。但是,还是要元气满满啊,否则怎么对得起你的青春年华?</p>
+
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/21/基于nodejs的前后端分离-初始化/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于nodejs的前后端分离--初始化</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/21/基于nodejs的前后端分离-初始化/" class="archive-article-date">
-  	<time datetime="2017-02-21T03:56:48.000Z" itemprop="datePublished">Feb 21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/21/基于nodejs的前后端分离-初始化/">基于nodejs的前后端分离--初始化</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/15/jquery中attr()与prop()/" class="archive-article-date">
-  	<time datetime="2017-02-15T01:24:38.000Z" itemprop="datePublished">Feb 15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/15/jquery中attr()与prop()/">jquery attr&amp;prop</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/类库插件/">类库插件</a></li></ul>
-	</div>
 
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/13/摆脱颓废-小目标制订/" class="archive-article-date">
-  	<time datetime="2017-02-13T03:16:42.000Z" itemprop="datePublished">Feb 13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/13/摆脱颓废-小目标制订/">摆脱颓废,小目标制订</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/文从心动/">文从心动</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/02/08/小踩nginx/" class="archive-article-date">
-  	<time datetime="2017-02-08T07:53:46.000Z" itemprop="datePublished">Feb 8</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/02/08/小踩nginx/">nginx的一些坑</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/脚本天堂/">脚本天堂</a></li></ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 </div>
       <footer id="footer">
@@ -412,8 +317,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
