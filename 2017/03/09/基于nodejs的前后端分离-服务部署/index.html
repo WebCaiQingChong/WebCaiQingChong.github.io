@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>基于nodejs的前后端分离--需求 | 爬呀爬呀爬呀爬</title>
+  <title>基于nodejs的前后端分离-服务部署 | 爬呀爬呀爬呀爬</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="开始之前应该先说一下大致需求,遗忘掉了">
+  <meta name="description" content="本以为可以像本地开发一样,直接启动服务就可以了,但事实上并不是这样。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于nodejs的前后端分离--需求">
-<meta property="og:url" content="http://yoursite.com/2017/02/22/基于nodejs的前后端分离-需求/index.html">
+<meta property="og:title" content="基于nodejs的前后端分离-服务部署">
+<meta property="og:url" content="http://yoursite.com/2017/03/09/基于nodejs的前后端分离-服务部署/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
-<meta property="og:description" content="开始之前应该先说一下大致需求,遗忘掉了">
-<meta property="og:updated_time" content="2017-02-22T03:08:28.000Z">
+<meta property="og:description" content="本以为可以像本地开发一样,直接启动服务就可以了,但事实上并不是这样。">
+<meta property="og:updated_time" content="2017-03-09T01:49:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于nodejs的前后端分离--需求">
-<meta name="twitter:description" content="开始之前应该先说一下大致需求,遗忘掉了">
+<meta name="twitter:title" content="基于nodejs的前后端分离-服务部署">
+<meta name="twitter:description" content="本以为可以像本地开发一样,直接启动服务就可以了,但事实上并不是这样。">
   
     <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
   
@@ -217,11 +217,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-基于nodejs的前后端分离-需求" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-基于nodejs的前后端分离-服务部署" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/02/22/基于nodejs的前后端分离-需求/" class="article-date">
-  	<time datetime="2017-02-22T02:46:54.000Z" itemprop="datePublished">2017-02-22</time>
+      <a href="/2017/03/09/基于nodejs的前后端分离-服务部署/" class="article-date">
+  	<time datetime="2017-03-09T01:36:02.000Z" itemprop="datePublished">2017-03-09</time>
 </a>
     </div>
   
@@ -234,7 +234,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      基于nodejs的前后端分离--需求
+      基于nodejs的前后端分离-服务部署
     </h1>
   
 
@@ -254,18 +254,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>开始之前应该先说一下大致需求,遗忘掉了<br><a id="more"></a><br>前后端的分离,可能应该有挺多种方式,可能我的这种方式抑或是需求会让前端同学更难受一点,毕竟对于我这么一个不懂后端的人来说,写C层真的是伤闹。</p>
-<h3 id="需求"><a href="#需求" class="headerlink" title="需求"></a><strong>需求</strong></h3><pre><code>1.路由控制
-2.模板渲染
-3.接口模拟
-4.请求代理
-</code></pre><p>我们的方案思路是,brower–&gt;nodejs–&gt;java 基于这种思路来看,java端负责提供数据接口,并以json格式来进行交流。</p>
-<p>也就是说,后台java现在只负责提供接口数据了,瞬间轻松不少,可苦逼的前端er,压力就大了不少。(ps:总监是否看我比较闲,就给我找点事情干呢?开个玩笑哈~~~)</p>
-<p>从koa和express两者之间,还是选择了express。个人觉得,koa里面已经很成型,功能健全,但是对于现状来说,可能学习成本有点高,而且我们的功能也相对较少,<br>所以选择了express。</p>
-<p>模板选择放弃了express自带的jade,因为对我这样的性格来说,没有个闭合标签什么的,总感觉是不完整的,再加上之前后台都是freemarker的模板,ejs与之相似,就选择了ejs。</p>
-<p>接口模拟方面,关于mock,额,原谅我知识不足,感觉好麻烦,就在安总的博客里面找到了imitator这个东西,感觉也是比较简单实用的。</p>
-<p>请求这一块,选择了github上star比较多的request,基本的用法跟平时类似。<br>关于异步的处理,自然是promiss了,本打算使用es6源生的Promiss,但是觉得貌似不是非常的好用,然后继续github,发现q的star好多,那就干脆尝试一下好了。</p>
-<p>这些也只是初步的一些猜想,在实践过程中,肯定会有不少的坑,而却对于我这个nojs的菜鸟来说,坑估计会更多。但是,还是要元气满满啊,否则怎么对得起你的青春年华?</p>
+        <p>本以为可以像本地开发一样,直接启动服务就可以了,但事实上并不是这样。<br><a id="more"></a><br>项目在本地运行的时候,我们可以直接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node ./app.js</span><br></pre></td></tr></table></figure></p>
+<p>或者我们在package.json文件中写入执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">        &quot;start&quot;: &quot;node ./app.js&quot;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></p>
+<p>但是在我把代码放入服务器的时候却发现,我如果想执行多个命令的时候,该怎么办?<br>首先,我启动了一个server,然后如果想再输入命令的话,要么重新打开窗口,要么停止上一个,这肯定是不友好的方法,或者说是<br>比较low的方法。毕竟都开始玩nodejs了,我们又干嘛这么low呢?<br>下面进入正题。</p>
+<p>###pm2<br>首先移步github看下这个东西。</p>
+<p><a href="https://github.com/Unitech/pm2" target="_blank" rel="external">https://github.com/Unitech/pm2</a></p>
+<p>pm2,一个带有负载均衡功能的node应用的进程管理器。</p>
+<p>下面是引用别人的话了,额,我还是菜鸟,还真没理解到那种程度。<a href="https://www.douban.com/note/314200231/" target="_blank" rel="external">https://www.douban.com/note/314200231/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">主要特性：</span><br><span class="line"></span><br><span class="line">内建负载均衡（使用Node cluster 集群模块）</span><br><span class="line">后台运行</span><br><span class="line">0秒停机重载，我理解大概意思是维护升级的时候不需要停机.</span><br><span class="line">具有Ubuntu和CentOS 的启动脚本</span><br><span class="line">停止不稳定的进程（避免无限循环）</span><br><span class="line">控制台检测</span><br><span class="line">提供 HTTP API</span><br><span class="line">远程控制和实时的接口API ( Nodejs 模块,允许和PM2进程管理器交互 )</span><br></pre></td></tr></table></figure>
+<p>上面的一些功能对目前的需求而言,我可能只用到了后台运行,其实这个用forever也可以做到,但是好多公司现在生产环境都用的pm2,<br>再加上github上star那么多,绝对令人垂涎。</p>
+<p>pm2的安装使用,就不再这里赘述了,没必要做文字的搬运工,因为我是代码的搬运工。</p>
 
       
     </div>
@@ -275,18 +273,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/03/09/基于nodejs的前后端分离-服务部署/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          基于nodejs的前后端分离-服务部署
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/02/21/基于nodejs的前后端分离-初始化/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">基于nodejs的前后端分离--初始化</div>
+    <a href="/2017/02/22/基于nodejs的前后端分离-需求/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">基于nodejs的前后端分离--需求</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
