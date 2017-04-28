@@ -4,18 +4,17 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>基于nodejs的前后端分离-服务部署 | 爬呀爬呀爬呀爬</title>
+  <title>Archives: 2017/4 | 爬呀爬呀爬呀爬</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="本以为可以像本地开发一样,直接启动服务就可以了,但事实上并不是这样。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="基于nodejs的前后端分离-服务部署">
-<meta property="og:url" content="http://yoursite.com/2017/03/09/基于nodejs的前后端分离-服务部署/index.html">
+  <meta name="description">
+<meta property="og:type" content="website">
+<meta property="og:title" content="爬呀爬呀爬呀爬">
+<meta property="og:url" content="http://yoursite.com/archives/2017/04/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
-<meta property="og:description" content="本以为可以像本地开发一样,直接启动服务就可以了,但事实上并不是这样。">
-<meta property="og:updated_time" content="2017-04-28T14:41:55.000Z">
+<meta property="og:description">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="基于nodejs的前后端分离-服务部署">
-<meta name="twitter:description" content="本以为可以像本地开发一样,直接启动服务就可以了,但事实上并不是这样。">
+<meta name="twitter:title" content="爬呀爬呀爬呀爬">
+<meta name="twitter:description">
   
     <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
   
@@ -217,88 +216,53 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-基于nodejs的前后端分离-服务部署" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/2017/03/09/基于nodejs的前后端分离-服务部署/" class="article-date">
-  	<time datetime="2017-03-09T01:36:02.000Z" itemprop="datePublished">2017-03-09</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/04/28/node全栈-第一期/" class="archive-article-date">
+  	<time datetime="2017-04-28T14:32:35.000Z" itemprop="datePublished">Apr 28</time>
 </a>
-    </div>
+        </div>
+    	 
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      基于nodejs的前后端分离-服务部署
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2017/04/28/node全栈-第一期/">node全栈-------第一期</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
 	</div>
 
-        
+          
 
+        </div>
         <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>本以为可以像本地开发一样,直接启动服务就可以了,但事实上并不是这样。<br><a id="more"></a><br>项目在本地运行的时候,我们可以直接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node ./app.js</span><br></pre></td></tr></table></figure></p>
-<p>或者我们在package.json文件中写入执行命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;scripts&quot;: &#123;</span><br><span class="line">        &quot;start&quot;: &quot;node ./app.js&quot;</span><br><span class="line">      &#125;</span><br></pre></td></tr></table></figure></p>
-<p>但是在我把代码放入服务器的时候却发现,我如果想执行多个命令的时候,该怎么办?<br>首先,我启动了一个server,然后如果想再输入命令的话,要么重新打开窗口,要么停止上一个,这肯定是不友好的方法,或者说是<br>比较low的方法。毕竟都开始玩nodejs了,我们又干嘛这么low呢?<br>下面进入正题。</p>
-<h3 id="pm2"><a href="#pm2" class="headerlink" title="pm2"></a>pm2</h3><p>首先移步github看下这个东西。</p>
-<p><a href="https://github.com/Unitech/pm2" target="_blank" rel="external">https://github.com/Unitech/pm2</a></p>
-<p>pm2,一个带有负载均衡功能的node应用的进程管理器。</p>
-<p>下面是引用别人的话了,额,我还是菜鸟,还真没理解到那种程度。<a href="https://www.douban.com/note/314200231/" target="_blank" rel="external">https://www.douban.com/note/314200231/</a></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">主要特性：</span><br><span class="line"></span><br><span class="line">内建负载均衡（使用Node cluster 集群模块）</span><br><span class="line">后台运行</span><br><span class="line">0秒停机重载，我理解大概意思是维护升级的时候不需要停机.</span><br><span class="line">具有Ubuntu和CentOS 的启动脚本</span><br><span class="line">停止不稳定的进程（避免无限循环）</span><br><span class="line">控制台检测</span><br><span class="line">提供 HTTP API</span><br><span class="line">远程控制和实时的接口API ( Nodejs 模块,允许和PM2进程管理器交互 )</span><br></pre></td></tr></table></figure>
-<p>上面的一些功能对目前的需求而言,我可能只用到了后台运行,其实这个用forever也可以做到,但是好多公司现在生产环境都用的pm2,<br>再加上github上star那么多,绝对令人垂涎。</p>
-<p>pm2的安装使用,就不再这里赘述了,没必要做文字的搬运工,因为我是代码的搬运工。</p>
-
-      
-    </div>
-    
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2017/03/24/第一个月就来晚了/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          第一个月就来晚了
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/02/22/基于nodejs的前后端分离-需求/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">基于nodejs的前后端分离--需求</div>
-      <strong class="article-nav-caption">></strong>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-
-
-
-
-
-
+    
 
 </div>
       <footer id="footer">
@@ -324,8 +288,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
