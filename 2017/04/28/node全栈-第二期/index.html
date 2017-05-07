@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/28/node全栈-第二期/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
 <meta property="og:description" content="本期主要讲nodejs如何启动服务，配置路由，渲染页面。">
-<meta property="og:updated_time" content="2017-04-28T16:06:52.000Z">
+<meta property="og:updated_time" content="2017-04-28T16:08:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="node全栈-------第二期">
 <meta name="twitter:description" content="本期主要讲nodejs如何启动服务，配置路由，渲染页面。">
@@ -125,7 +125,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/文从心动/" style="font-size: 10px;">文从心动</a> <a href="/tags/样式天地/" style="font-size: 13.33px;">样式天地</a> <a href="/tags/类库插件/" style="font-size: 10px;">类库插件</a> <a href="/tags/脚本天堂/" style="font-size: 16.67px;">脚本天堂</a>
+						<a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/文从心动/" style="font-size: 13.33px;">文从心动</a> <a href="/tags/样式天地/" style="font-size: 13.33px;">样式天地</a> <a href="/tags/类库插件/" style="font-size: 10px;">类库插件</a> <a href="/tags/脚本天堂/" style="font-size: 16.67px;">脚本天堂</a>
 					</div>
 				</section>
 				
@@ -262,7 +262,7 @@
 <p>app.js  摘出来一些关键代码，如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"><span class="keyword">const</span> app = express();</span><br><span class="line"><span class="keyword">const</span> webRouter = <span class="built_in">require</span>(<span class="string">'./web_router'</span>);</span><br><span class="line">app.use(<span class="string">'/'</span>,webRouter);</span><br><span class="line">app.listen(<span class="number">9000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'server is running at http://localhost:9000/'</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <h2 id="路由"><a href="#路由" class="headerlink" title="路由"></a>路由</h2><p>web_router.js  如下：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">'express'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 引入controller</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">var</span> site = <span class="built_in">require</span>(<span class="string">'./controllers/site'</span>);</span><br><span class="line"><span class="keyword">var</span> auth = <span class="built_in">require</span>(<span class="string">'./middlewares/auth'</span>);</span><br><span class="line"><span class="keyword">var</span> server  = <span class="built_in">require</span>(<span class="string">'./controllers/server'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> router = express.Router();</span><br><span class="line"></span><br><span class="line"><span class="comment">//首页</span></span><br><span class="line">router.get(<span class="string">'/'</span>,auth.userRequired,site.index);</span><br><span class="line"><span class="comment">//登录</span></span><br><span class="line">router.get(<span class="string">'/login'</span>,site.login);</span><br><span class="line"><span class="comment">//接口详情</span></span><br><span class="line">router.get(<span class="string">'/details/:item'</span>,auth.userRequired,site.details);</span><br><span class="line"><span class="comment">//添加分类</span></span><br><span class="line">router.get(<span class="string">'/addProject'</span>,auth.userRequired,site.addProject);</span><br><span class="line">router.get(<span class="string">'/addCategory/:id'</span>,auth.userRequired,site.addCategory);</span><br><span class="line">router.get(<span class="string">'/addInterface/:id'</span>,auth.userRequired,site.addInterface);</span><br><span class="line">router.get(<span class="string">'/edit'</span>,auth.userRequired,site.edit);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * 接口请求</span><br><span class="line"> */</span></span><br><span class="line"></span><br><span class="line">router.post(<span class="string">'/login/validate.no'</span>,server.validate);</span><br><span class="line">router.get(<span class="string">'/login/loginout.no'</span>,server.loginout);</span><br><span class="line">router.post(<span class="string">'/add/addProject'</span>,server.addProject);</span><br><span class="line">router.post(<span class="string">'/add/addCategory'</span>,server.addCategory);</span><br><span class="line">router.post(<span class="string">'/add/addInterface'</span>,server.addInterface);</span><br><span class="line">router.post(<span class="string">'/add/step2'</span>,server.addProject);</span><br><span class="line">router.post(<span class="string">'/recive/pro'</span>,server.getPro);</span><br><span class="line">router.post(<span class="string">'/eidt/interface'</span>,server.editInterface);</span><br><span class="line"></span><br><span class="line"><span class="built_in">module</span>.exports = router;</span><br></pre></td></tr></table></figure></p>
 <p>在这里需要解释一点，因为是运行在服务器端，node环境本身对es6的支持还算不错，所以这里并没有用babel进行es6的转译。</p>
-<p>router 实例本身的方法有几个，但是一般情况下，只用到了get以及post方法。方法第一个参数是一个字符串，表示请求的url路径，后面可根据业务<br>添加多个方法。</p>
+<p>router 实例本身的方法有几个，但是一般情况下，只用到了get以及post方法。方法第一个参数是一个字符串，表示请求的url路径，后面可根据业务添加多个方法。</p>
 <p>以添加分类方法为例，第一个参数 ‘/addProject’,指的是url(即localhost:9000/addProject)<br>第二个参数 auth.userRequired 是一个方法，从字面上也大致能猜出来，值需要用户登录，这就相当于一个拦截器，如果用户登录了，就执行后面的一个方法，否则，就做另外一个件事情。<br>后面理论上可以添加N个方法，但实际上肯定不会是这样子的~。<br>第三个参数 site.addProject 其实也就该进行页面的渲染了。</p>
 <p>接下来，就是关于页面如何渲染了。</p>
 <h2 id="页面渲染"><a href="#页面渲染" class="headerlink" title="页面渲染"></a>页面渲染</h2><p>这里就又要再去提一下app.js了，上面的代码并不全。首先，模板引擎选择的是ejs-mate.比ejs多了一个layout功能，也就是可以有最终的layout。<br>这个layout也就是一个最基本的架子，现在移步view这个目录下大致看一下。</p>
@@ -284,6 +284,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/05/07/第二月签到/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          第二月签到
+        
+      </div>
+    </a>
   
   
     <a href="/2017/04/28/node全栈-第一期/" id="article-nav-older" class="article-nav-link-wrap">
