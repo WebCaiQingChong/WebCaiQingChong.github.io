@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/06/听别人面试的体会/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
 <meta property="og:description" content="进了豹哥的小密圈，听了他跟圈内一个朋友的面试录音，有了一点心得，或者说是体验吧，因为后天也预约了豹哥的面试，就先谈一谈今天了这一个小时的面试录音的体会。这里当然对事不对人，那个朋友也是很优秀的~">
-<meta property="og:updated_time" content="2017-06-06T14:44:47.000Z">
+<meta property="og:updated_time" content="2017-06-06T14:45:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="听别人面试的一个体会">
 <meta name="twitter:description" content="进了豹哥的小密圈，听了他跟圈内一个朋友的面试录音，有了一点心得，或者说是体验吧，因为后天也预约了豹哥的面试，就先谈一谈今天了这一个小时的面试录音的体会。这里当然对事不对人，那个朋友也是很优秀的~">
@@ -269,7 +269,7 @@
 <p>可能你用过es6，你想到了用let来替代var，再改造一下<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = <span class="built_in">document</span>.getElementsByTagName(<span class="string">'p'</span>);</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>;i&lt;arr.length;i++)&#123;</span><br><span class="line">    arr[i].onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        alert(i)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>当然也是可以达到效果，这时候面试官可能就let来延伸es6知识掌握，为什么这里用let就可以达到效果，这里因为let本身有块级作用域，并且也不存在变量提升等，<br>然后可能会再问到js的继承问题，es6又有了class这个类的概念，它又是如何实现继承的，然后再考察源生js如何实现继承，又涉及到了原型链以及作用域链等问题.<br>一步步的进行考察，我倒是挺喜欢这样的方式，循序渐进。<br>然后可以再问一些当前比较热门的框架的东西，比如MVVM框架，以vue为例，那肯定又离不开webpack，webpack的机制，又会延伸到nodejs，以及AMD,CMD规范。<br>这样环环相扣考察的也应该会比较全面。(我还比较low，只能泛泛而谈，vue我也只是demo级别)</p>
 <p>豹哥面试过程中也问了几个css方面的问题，个人感觉css这个东西应该算是前端的基本功，很多人都是徒手从样式写过来的。常见的一些，比如定位，浮动，如何清除浮动，单纯的问技术点，肯定没有什么意思，这儿又想到了<br>我前面提过的一个九宫格布局，又九宫格的布局，可以考到定位，浮动，margin等知识点，然后再对css3的一些东西进行提问。<br>这里面肯定会包含一些你做过东西的一些常见解决办法。再到考察盒子模型等。</p>
-<p>对于初级或者中级的考察，估计里面也应该要涉及到jquery，毕竟这是我们前端的一个入门类库。比如事件绑定，你可能一般用jquery的on方法，这就又可以延伸到事件捕获，事件冒泡。<br>在如常见的一些列表操作，可能涉及到append,after,before等api，或者元素选择器，如何选择同辈元素，如果元素某元素之后的所有元素，之前的所有元素。<br>或者jquery里面有一些相似方法的比较，如jquery  attr方法与prop方法的区别，最简单的一个例子，就是复选框的全选或者全不选问题，你会用attr还是prop呢，具体也看我之前的写的就可以了</p>
+<p>对于初级或者中级的考察，估计里面也应该要涉及到jquery，毕竟这是我们前端的一个入门类库。比如事件绑定，你可能一般用jquery的on方法，这就又可以延伸到事件捕获，事件冒泡。<br>在如常见的一些列表操作，可能涉及到append,after,before等api，或者元素选择器，如何选择同辈元素，如何选择某元素之后的所有元素，之前的所有元素。<br>或者jquery里面有一些相似方法的比较，如jquery  attr方法与prop方法的区别，最简单的一个例子，就是复选框的全选或者全不选问题，你会用attr还是prop呢，具体也看我之前的写的就可以了</p>
 <p>现在移动端应该算是比较普及了吧，问一下移动端的适配问题，适配问题的原理又是什么，说一下rem，再延伸到sass或者less这样的预编译，有可能会涉及到gulp这样的任务流构建之类的。<br>面试的具体技术内容不再赘述，基本上涵盖了不少内容。(这是初中级的面试，高级的，目前能力不够，也并不知道要问哪些东西，待来日我成为高级再来分享</p>
 <h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a><strong>注意事项</strong></h3><p>面试的时候一定占据主动，组织好你自己的语言，回答问题要回答到点上，如果语言组织不好，或者绕了好久才到点上，估计很多面试官都会没有耐心。</p>
 <p>面试的时候要自然大方一点，最好不好扭扭捏捏，尤其是男同学，我们都是汉子，可不要表现的跟个小姑娘一样~</p>
