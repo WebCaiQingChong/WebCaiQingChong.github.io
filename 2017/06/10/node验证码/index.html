@@ -315,12 +315,14 @@
 
 
 
+
 <section class="comments" id="comments">
     <div id="gitment_thread"></div>
     <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
     <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
     <script>
         var gitment = new Gitment({
+            id:'',
             owner: '9919',
             repo: 'https://github.com/WebCaiQingChong/gitmentRepo.git',
             oauth: {
@@ -331,6 +333,7 @@
         gitment.render('comments')
     </script>
 </section>
+
 
 
 </div>
