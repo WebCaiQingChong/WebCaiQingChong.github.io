@@ -295,6 +295,26 @@
 
 
 
+<section class="comments" id="comments">
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            id:'',
+            owner: 'WebCaiQingChong',
+            repo: 'https://github.com/WebCaiQingChong/gitmentRepo.git',
+            oauth: {
+                client_id: 'd801b2cd7ddf68b58b7c',
+                client_secret: '8b972ad1458813dbb3ab9fbea03f04bb991fd749',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+
+
+
 </div>
       <footer id="footer">
   <div class="outer">
