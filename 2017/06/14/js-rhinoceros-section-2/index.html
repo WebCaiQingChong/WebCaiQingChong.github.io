@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/06/14/js-rhinoceros-section-2/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
 <meta property="og:description" content="啃一啃犀牛书–词法结构">
-<meta property="og:updated_time" content="2017-06-14T07:52:34.000Z">
+<meta property="og:updated_time" content="2017-06-14T07:55:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="啃一啃犀牛书--词法结构">
 <meta name="twitter:description" content="啃一啃犀牛书–词法结构">
@@ -268,9 +268,8 @@
 <li>帕斯卡命名法<br> 规则：基本上类似于大驼峰</li>
 </ul>
 <p>如果你想对其了解的更深入，请移步<a href="https://www.w3cplus.com/javascript/variable-naming-principles.html" target="_blank" rel="external">w3cplus</a>。</p>
-<p>但是我们现在在命名的时候，很多时候采用下划线或者横杠进行连接，一般的规则：<br>css中采用横杠，js中使用下划线。这个也完全看个人喜好，但是你的命名一定要语义清晰，便于记忆。对于后来维护你的代码的人来说，可以让别人很快的理解。<br>(ps:之前在群里面听说的，命名采用的拼音，听到这儿觉得，老铁，没毛病啊，但是后一句让我笑喷了，是方言的拼音！可能我们现阶段的英语并不好，但是我们也要有超前意识，<br>万一哪一天我们的代码开源了，外国的朋友看到你的命名，会不会有想把github账号注销了的想法呢？)</p>
-<h3 id="分号"><a href="#分号" class="headerlink" title="分号"></a>分号</h3><p>分号。</p>
-<p>我现在的习惯，基本上完整语句的行末我都习惯加上分号，即使少了分号并不会报错，但我还是强迫症版的一定要加上。<br>这就扯到js身上了。js在解析的时候，如果无法解析，会自动填补分号，尤其在换行执行下一条语句的时候，但它并不是都会符合我们意思的去添加。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var y = x+f</span><br><span class="line">(a+b).toString()</span><br></pre></td></tr></table></figure></p>
+<p>但是我们现在在命名的时候，很多时候采用下划线或者横杠进行连接，一般的规则：<br>css中采用横杠，js中使用下划线。这个也完全看个人喜好，但是你的命名一定要语义清晰，便于记忆。对于后来维护你的代码的人来说，可以让别人很快的理解。<br>(ps:之前在群里面听说的，命名采用的拼音，听到这儿觉得，老铁，没毛病啊，但是后一句让我笑喷了，是方言的拼音！可能我们现阶段的英语并不好，但是我们也要有超前意识，万一哪一天我们的代码开源了，外国的朋友看到你的命名，会不会有想把github账号注销了的想法呢？)</p>
+<h3 id="分号"><a href="#分号" class="headerlink" title="分号"></a>分号</h3><p>我现在的习惯，基本上完整语句的行末我都习惯加上分号，即使少了分号并不会报错，但我还是强迫症版的一定要加上。<br>这就扯到js身上了。js在解析的时候，如果无法解析，会自动填补分号，尤其在换行执行下一条语句的时候，但它并不是都会符合我们意思的去添加。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var y = x+f</span><br><span class="line">(a+b).toString()</span><br></pre></td></tr></table></figure></p>
 <p>你可能看到这个代码觉得执行的是先对y复制，然后a+b调用toString方法，但它真正执行的却是这样的！！！<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var y = x+f(a+b).toString()</span><br></pre></td></tr></table></figure></p>
 <p>傻眼了吧。在这里不像再去抄犀牛书上的内容，因为觉得本文的篇幅不宜太长，如果你想了解这些东西，可以自行查找。</p>
 <h3 id="保留字"><a href="#保留字" class="headerlink" title="保留字"></a>保留字</h3><p>js中有很多的保留字，如果我们在命名的时候，要避开保留字去命名。(ps:使用保留字命名，有时候可能出错你都不知道在哪儿出错了)</p>
