@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>重排-重绘-函数节流-动画掉帧 | 爬呀爬呀爬呀爬</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="上次豹哥面试里面提到了重排(回流)，重绘，函数节流，函数去抖，使用setInterval做动画的掉帧问题。今天找了写资料，总结一下。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="重排-重绘-函数节流-动画掉帧">
+<meta property="og:url" content="http://yoursite.com/2017/06/16/js-interview-question/index.html">
+<meta property="og:site_name" content="爬呀爬呀爬呀爬">
+<meta property="og:description" content="上次豹哥面试里面提到了重排(回流)，重绘，函数节流，函数去抖，使用setInterval做动画的掉帧问题。今天找了写资料，总结一下。">
+<meta property="og:image" content="http://7xsqnr.com1.z0.glb.clouddn.com/box.jpeg">
+<meta property="og:updated_time" content="2017-06-16T17:51:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="重排-重绘-函数节流-动画掉帧">
+<meta name="twitter:description" content="上次豹哥面试里面提到了重排(回流)，重绘，函数节流，函数去抖，使用setInterval做动画的掉帧问题。今天找了写资料，总结一下。">
+<meta name="twitter:image" content="http://7xsqnr.com1.z0.glb.clouddn.com/box.jpeg">
+  
+    <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xsqnr.com2.z0.glb.clouddn.com/title.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Web菜青虫</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/tags/样式天地">样式天地</a></li>
+				        
+							<li><a href="/tags/类库插件">类库插件</a></li>
+				        
+							<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+				        
+							<li><a href="/tags/文从心动">文从心动</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/文从心动/" style="font-size: 16px;">文从心动</a> <a href="/tags/样式天地/" style="font-size: 14px;">样式天地</a> <a href="/tags/类库插件/" style="font-size: 12px;">类库插件</a> <a href="/tags/脚本天堂/" style="font-size: 18px;">脚本天堂</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.52cik.com/">楼教主</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://springxiege.github.io/">心情</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://imochen.com/">墨尘</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.barretlee.com/">小胡子哥</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/lvdabao/">吕大豹</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://annn.me/">安总</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">纵使道路崎岖坎坷，我亦保持本心，勇往直前</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Web菜青虫</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Web菜青虫</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/样式天地">样式天地</a></li>
+		        
+					<li><a href="/tags/类库插件">类库插件</a></li>
+		        
+					<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+		        
+					<li><a href="/tags/文从心动">文从心动</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><style>
+    .gitment-header-container {
+        margin: 60px 0 !important;
+    }
+</style>
+<article id="post-js-interview-question" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/06/16/js-interview-question/" class="article-date">
+  	<time datetime="2017-06-16T14:34:06.000Z" itemprop="datePublished">2017-06-16</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      重排-重绘-函数节流-动画掉帧
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>上次豹哥面试里面提到了重排(回流)，重绘，函数节流，函数去抖，使用setInterval做动画的掉帧问题。今天找了写资料，总结一下。<br><a id="more"></a><br>前几天就想弄了，但是开始了啃犀牛书系列，但是这个问题估计再拖几天就忘记去查看了，索性今天事情不多，就整理一下。</p>
+<h2 id="重绘-repaint-—重排-回流-reflow"><a href="#重绘-repaint-—重排-回流-reflow" class="headerlink" title="重绘(repaint)—重排/回流(reflow)"></a>重绘(repaint)—重排/回流(reflow)</h2><p>这两个概念应该是放在一起的。在理解之前，应该先清除浏览器渲染页面的机制。在下面的参考链接已经介绍的很详细了，我就简单进行概括：</p>
+<pre><code>1. 解析html，生成dom
+2. 解析css，生成cssdom
+3. html+css整合形成渲染树
+4. 生成布局(layout)
+5. 绘制到屏幕(paint)
+</code></pre><p>4+5=渲染。<br>里面有两个地方需要注意：</p>
+<ol>
+<li>隐藏的元素(display:none)，他们是不在渲染树上的</li>
+<li>visibility:hidden的元素是在渲染书上的，这个属性只是让元素不显示，但是它还是会占据空间，影响布局。</li>
+</ol>
+<p>当dom元素的几何属性发生改变，浏览器需要重新计算元素的几何属性，然后重新构造渲染树，这就是重排的意思。</p>
+<p>构建完新的渲染树，浏览器又将此时的layout绘制到屏幕，这就是重绘。如果更改了除了几何属性之外的其他属性，浏览器会再次进行绘制，这个也是重绘。<br>如改变字体颜色，背景色等。有此处可以看出来，重排不定重绘，重绘未必重排。</p>
+<p>当重排影响到了与它相关的元素，导致整片区域发生了重排，这是回流。(个人理解，感觉这样解释更容易明白)。</p>
+<p>这里的几何属性主要有以下几种：</p>
+<pre><code>1. 添加元素或删除(removeChild，display:none)
+2. 元素位置改变
+3. 元素尺寸改变(盒模型)
+4. 内容改变所引起的宽高改变
+5. 页面初始化
+6. 浏览器窗口变化，引起resize
+</code></pre><p>举个栗子:</p>
+<p><img src="http://7xsqnr.com1.z0.glb.clouddn.com/box.jpeg" alt="回流展示"></p>
+<p>假设D元素是固定宽高，C元素也是，而B与A元素是由D元素撑起的高度。如果我们此时将D元素的高缩减50%，很明显，此时D元素发生了重排，重绘。<br>因为B元素的高度是有D元素撑起的，D元素高度减少，对应的B元素也随之减少，此时A元素也因此改变了高度，都发生了重排，重绘。<br>这样的一个过程，称其为回流。(个人觉得这样的理解很通俗易懂,移动端这样的布局可能居多，我们一般不指定实际高度，而是靠子元素来撑起高度)</p>
+<p>在<a href="http://www.ruanyifeng.com/blog/2015/09/web-page-performance-in-depth.html" target="_blank" rel="external">阮一峰的博客</a>里面解释的很简明扼要。</p>
+<blockquote>
+<p>网页生成的时候，至少会渲染一次。用户访问的过程中，还会不断重新渲染。当发生修改dom，修改样式表，用户事件(比如鼠标悬停、页面滚动、输入框键入文字、改变窗口大小等等)，会导致页面重新渲染，即重新生成布局和重新绘制，前者叫重排，后者叫重绘</p>
+</blockquote>
+<p>重绘，重排这些是不可避免的，因为你总要去渲染页面。但是大量的重绘，重排将非常的消耗资源，这也是前端性能优化之中的需要考虑的地方。解决方案肯定是尽可能少的去触发重绘与重排。(这里就不举例子了，网上一搜一大把)<br>解决方案：(ps:阮总貌似总结的很详细，我就借一下~~)</p>
+<pre><code>1. 如果dom有多个读写操作，那么尽量将相同的放在一起执行，避免穿插执行。
+2. 获取计算属性，最好缓存使用，避免下次使用重新获取，再次触发
+3. 改变样式属性，通过classname或者csstext,尽量一次性改变
+4. 使用离线dom而非真实dom，Document Fragment，或克隆对象，进行操作，然后进行替换
+5. 如果有频繁大量的操作，先将元素隐藏，操作完成后，再展示
+6. 设置绝对定位或静止定位，或通过css3 transfrom，opacity,等进行动画或移动
+7. 使用虚拟dom
+8. 函数节流，函数去抖
+</code></pre><h2 id="函数节流—函数去抖"><a href="#函数节流—函数去抖" class="headerlink" title="函数节流—函数去抖"></a>函数节流—函数去抖</h2><h4 id="函数节流-throttle"><a href="#函数节流-throttle" class="headerlink" title="函数节流(throttle)"></a>函数节流(throttle)</h4><p>场景如下，如果用源生方法实现元素的拖拽功能，我们会监听mousemove时间，如果我们针对每一个像素都做处理，那鼠标滑动的很快的时候，就会触发很多次回调函数，每次回调函数的执行，都是一次重排，重绘，这样势必影响性能，<br>我们要做的就是限制触发回调的频率,所以，函数节流的本质就是不让函数太过频繁的执行，减少一些过快的调用来节流。<br>以上面场景为例，我们用setInterval,设置一个合理的间隔来执行回调。It’s time to show code!!!(没代码，说个毛线!!!)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> flag = <span class="literal">true</span>;</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'mouseover'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(!flag)&#123;</span><br><span class="line">        <span class="comment">//如果上一次动作正在执行，这一次就不执行</span></span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//正在执行</span></span><br><span class="line">    flag = <span class="literal">false</span>;</span><br><span class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//执行逻辑</span></span><br><span class="line"></span><br><span class="line">        <span class="comment">//执行结束</span></span><br><span class="line">        flag = <span class="literal">true</span></span><br><span class="line">    &#125;,<span class="number">100</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h4 id="函数去抖-debounce"><a href="#函数去抖-debounce" class="headerlink" title="函数去抖(debounce)"></a>函数去抖(debounce)</h4><p>场景如下，滚动加载，我们会监听元素的scroll事件，总不能每滚动一下就触发回调，这样又是N次的回调，如果在这儿使用节流，似乎也并不合适，节流是在间隔的时间去触发，并不合理，我们要做的就是让它只触发一次。<br>本质，对一定时间段内的连续调用的函数，只让其执行一次。It’s time to show code!!!(没代码，说个毛线!!!)<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> timer = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">document</span>.addEventListener(<span class="string">'scroll'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(timer)&#123;</span><br><span class="line">        <span class="comment">//不管上一次执行是否结束，都清除，直接执行下一次</span></span><br><span class="line">        clearTimeout(timer)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    timer = setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="comment">//执行逻辑</span></span><br><span class="line"></span><br><span class="line">    &#125;,<span class="number">100</span>)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这样解释起来肯定会感觉比较绕口，或者有点理解理解不清的意思，但是相信看过简单的代码，应该就比较容易区分了。</p>
+<h2 id="动画掉帧"><a href="#动画掉帧" class="headerlink" title="动画掉帧"></a>动画掉帧</h2><p>这个所谓的bug，里面实际上涉及的知识点还真不少，一点一点来。</p>
+<h4 id="setTimeout-VS-setInterval"><a href="#setTimeout-VS-setInterval" class="headerlink" title="setTimeout   VS    setInterval"></a>setTimeout   VS    setInterval</h4><p>用法类似：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>,<span class="title">millisecond</span>)</span><br><span class="line"><span class="title">setInterval</span>(<span class="params">function,millisecond</span>)</span></span><br></pre></td></tr></table></figure></p>
+<p>setTimeout 只执行一次，setInterval执行多次，setTimeout我们一般用递归的方法来实现setInterval.每当间隔时间达到，我们就会去执行回调函数，但是，这里并没有说里面的回调函数一定可以执行完成。</p>
+<p>第一个参数，一个回调函数，第二个参数，间隔时间，单位毫秒(一般情况下是两个参数，但是也允许传入第三个参数，可传入回调函数中使用)。在js权威指南中，有这样的解释，第一个参数也可以作为字符串传入，如果是字符串传入，会进行eval()进行求值。<br>但是在nodejs的api里面，如果第一个参数不是function的话，会抛出一个TypeError.</p>
+<p>我们经常会看到如下的写法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;,<span class="number">0</span>);</span><br></pre></td></tr></table></figure></p>
+<p>从代码上来看，意思应该是立即执行，但实际上并不是这样的，实际上它是将其放入事件队列中，等其他的执行完成后，再”立即”执行它。由此，看上面就知道，每一个回调函数都被放入队列中，等待上一个队列事件完成，它再执行，<br>这本身就已经损失了精度，更不可想象我执行N次之后的后果是什么了。</p>
+<p>在nodejs的api中，有这样一段描述：</p>
+<blockquote>
+<p>The callback will likely not be invoked in precisely delay milliseconds. Node.js makes no guarantees about the exact timing of when callbacks will fire, nor of their ordering. The callback will be called as close as possible to the time specified.</p>
+<p>Note: When delay is larger than 2147483647 or less than 1, the delay will be set to 1.</p>
+</blockquote>
+<p>如果看不懂，也可以有道或者google。第一句，它大致意思是：这个延迟时间并不是一个精确的延迟时间，只是尽可能的接近这个延迟时间。第二句，应该都可以的吧？</p>
+<h4 id="掉帧的原因"><a href="#掉帧的原因" class="headerlink" title="掉帧的原因"></a>掉帧的原因</h4><p>说到掉帧，先解释什么是帧。帧这里指的是帧率，也就是设备刷新率。现在大部分移动设备的帧率基本上都是在60fps(frame per second)。关于这些名词解析，就借助<a href="https://www.w3cplus.com/animation/animation-performance-guide.html" target="_blank" rel="external">大漠的w3cplus</a>来说明。(在漠叔面前，我等只可望其项背)</p>
+<ul>
+<li>帧：在动画过程中，每一幅静止画面即为一“帧”。</li>
+<li>帧率：即每秒钟播放的静止画面的数量，单位是fps(Frame per second)。</li>
+<li>帧时长：即每一幅静止画面的停留时间，单位一般是ms(毫秒)。</li>
+<li>跳帧(掉帧/丢帧)：在帧率固定的动画中，某一帧的时长远高于平均帧时长，导致其后续数帧被挤压而丢失的现象。</li>
+</ul>
+<p>现在我们一般都是以60fps为一个标准来进行的，如果能达到这个，基本上就算是完美(应该说是感觉动画很流程)。所以对于我们来说，我们就是要处理好每一帧，对于我们的动画而言，在每一帧里面我们可能要去触发重绘或重排等。<br>简单计算一下，60fps即每秒60帧，对应60个静止画面。也就是我们需要在1000/60ms，即16.67ms里面完成一次回调。这里就要求我们对于这个把控要严格一点了。到此，我们应该基本知道为什么setTimeout,setInterval。对于我们当前的要求来说，<br>这两个精度方面的欠缺估计是达不到我们的预期，同时，如果我们在这16.67ms里面并没有完成我们的静止画面绘制，那就影响到了下一个绘制，以此类推，我们可能就出现多帧或者丢帧。</p>
+<h4 id="requestAnimationFrame"><a href="#requestAnimationFrame" class="headerlink" title="requestAnimationFrame"></a>requestAnimationFrame</h4><p>接下来正主来了，window.requestAnimationFrame，简单来说，这个是浏览器用于定时循环操作的一个接口，类似于setTimeout，主要用途是按帧对网页进行重绘。很切题，主要用途~~<a href="http://javascript.ruanyifeng.com/htmlapi/requestanimationframe.html" target="_blank" rel="external">参考这个</a><br>设置这个API的目的是为了让各种网页动画效果（DOM动画、Canvas动画、SVG动画、WebGL动画）能够有一个统一的刷新机制，从而节省系统资源，提高系统性能，改善视觉效果。代码中使用这个API，就是告诉浏览器希望执行一个动画，让浏览器在下一个动画帧安排一次网页重绘。</p>
+<blockquote>
+<p>requestAnimationFrame的优势，在于充分利用显示器的刷新机制，比较节省系统资源。显示器有固定的刷新频率（60Hz或75Hz），也就是说，每秒最多只能重绘60次或75次，requestAnimationFrame的基本思想就是与这个刷新频率保持同步，利用这个刷新频率进行页面重绘。此外，使用这个API，一旦页面不处于浏览器的当前标签，就会自动停止刷新。这就节省了CPU、GPU和电力。(11点多写到现在，眼睛有点酸了，请允许我复制一下)<br>这里面提到了电力，是因为在笔记本不充电的情况下使用电池，浏览器在该模式下为了节省电量，正常情况下，chrome等最小为的间隔为4ms，此时会将更新频率与系统时间保持一致，也就是更慢了。<br>使用这个api就是为了保证我们可以稍微稳定的执行一秒60次的操作，以此来避免掉帧情况。</p>
+</blockquote>
+<p>但是这样并不尽然，假设你在该时间间隔内的操作是大量的，或者比较复杂的情况，你本身的操作要超过16.67，那你的动画可能还要掉帧，或者不顺畅，所以才处理动画的时候，还是尽可能的遵循下面的原则：</p>
+<pre><code>* 避免频繁的重排。
+* 避免大面积的重绘。
+* 优化JS运行性能。
+</code></pre><h4 id="requestIdleCallback"><a href="#requestIdleCallback" class="headerlink" title="requestIdleCallback"></a>requestIdleCallback</h4><p>在看阮总的那篇文章的时候他提到了这个，于是又去查了一下这个api到底是做什么的。</p>
+<p><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Window/requestIdleCallback" target="_blank" rel="external">MDN</a>上是这样解释的：</p>
+<blockquote>
+<p>window.requestIdleCallback() 会在浏览器空闲时期依次调用函数， 这就可以让开发者在主事件循环中执行后台或低优先级的任务，而且不会对像动画和用户交互这样延迟触发而且关键的事件产生影响。函数一般会按先进先调用的顺序执行，除非函数在浏览器调用它之前就到了它的超时时间。<br>具体用法请移步MDN，因为没有用过，这里并不赘述。这个方法也正好对应了<a href="https://www.w3cplus.com/animation/animation-performance-guide.html" target="_blank" rel="external">大漠</a>里面关于–保证帧率平稳（避免跳帧）的解决方案：</p>
+<ul>
+<li>不在连续的动画过程中做高耗时的操作（如大面积重绘、重排、复杂JS执行），避免发生跳帧。</li>
+<li>若高耗时操作无法避免，则尝试化解，比如：将高耗时操作放在动画开始或结尾处。将高耗时操作分摊至动画的每一帧中处理。</li>
+</ul>
+</blockquote>
+<p>至此，关于setTimeout,setInterval的动画掉帧问题应该解释的比较清楚了，如果你还有不清楚的，请移步参考链接进行查阅。</p>
+<p>从看文章到写博客，花了将近三个小时，但是这三个小时感觉很受益，本文可能略长，在看的时候希望可以一块一块的看，这样对于理解会很有用，文中并没有对调试工具的使用，和如何观察重排，重绘以及渲染时间的使用，如想了解，请自行查阅。</p>
+<p>如果你发现文中有错或者不足，请在下方评论区执政批评，欢迎拍砖~~文中有复制现象，但是我觉得别人的解释很到位，如果我再转译一次，很可能信息失真，所以不怕拍砖，但本文也基本上算是98%的纯手打。</p>
+<p>如果你觉得本文对你有用，那证明我这三个小时就更加值得了，如果喜欢，欢迎转载~~~</p>
+<h3 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h3><ul>
+<li><a href="http://web.jobbole.com/83164/" target="_blank" rel="external">http://web.jobbole.com/83164/</a></li>
+<li><a href="http://www.cnblogs.com/zichi/p/4713031.html" target="_blank" rel="external">http://www.cnblogs.com/zichi/p/4713031.html</a></li>
+<li><a href="http://www.ruanyifeng.com/blog/2015/09/web-page-performance-in-depth.html" target="_blank" rel="external">http://www.ruanyifeng.com/blog/2015/09/web-page-performance-in-depth.html</a></li>
+<li><a href="http://web.jobbole.com/85897/" target="_blank" rel="external">http://web.jobbole.com/85897/</a></li>
+<li><a href="http://www.infoq.com/cn/articles/javascript-high-performance-animation-and-page-rendering" target="_blank" rel="external">http://www.infoq.com/cn/articles/javascript-high-performance-animation-and-page-rendering</a></li>
+<li><a href="https://github.com/hanzichi/underscore-analysis/issues/20" target="_blank" rel="external">https://github.com/hanzichi/underscore-analysis/issues/20</a></li>
+<li><a href="https://www.w3cplus.com/animation/animation-performance-guide.html" target="_blank" rel="external">https://www.w3cplus.com/animation/animation-performance-guide.html</a></li>
+</ul>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/14/js-rhinoceros-section-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">啃一啃犀牛书--词法结构</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'webcaiqingchong',
+            repo: 'gitmentRepo',
+            oauth: {
+                client_id: 'd801b2cd7ddf68b58b7c',
+                client_secret: '2cfcbf0d7038df0d9f5b395e75635787b330f279',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Web菜青虫
+    	</div>
+      	<div class="footer-right">
+      		一只爬行在前端道路上的菜青虫
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
