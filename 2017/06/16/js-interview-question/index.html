@@ -13,7 +13,7 @@
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
 <meta property="og:description" content="上次豹哥面试里面提到了重排(回流)，重绘，函数节流，函数去抖，使用setInterval做动画的掉帧问题。今天找了写资料，总结一下。">
 <meta property="og:image" content="http://7xsqnr.com1.z0.glb.clouddn.com/box.jpeg">
-<meta property="og:updated_time" content="2017-06-16T17:51:26.000Z">
+<meta property="og:updated_time" content="2017-06-20T09:14:44.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="重排-重绘-函数节流-动画掉帧">
 <meta name="twitter:description" content="上次豹哥面试里面提到了重排(回流)，重绘，函数节流，函数去抖，使用setInterval做动画的掉帧问题。今天找了写资料，总结一下。">
@@ -274,9 +274,8 @@
 <li>visibility:hidden的元素是在渲染书上的，这个属性只是让元素不显示，但是它还是会占据空间，影响布局。</li>
 </ol>
 <p>当dom元素的几何属性发生改变，浏览器需要重新计算元素的几何属性，然后重新构造渲染树，这就是重排的意思。</p>
-<p>构建完新的渲染树，浏览器又将此时的layout绘制到屏幕，这就是重绘。如果更改了除了几何属性之外的其他属性，浏览器会再次进行绘制，这个也是重绘。<br>如改变字体颜色，背景色等。有此处可以看出来，重排不定重绘，重绘未必重排。</p>
-<p>当重排影响到了与它相关的元素，导致整片区域发生了重排，这是回流。(个人理解，感觉这样解释更容易明白)。</p>
-<p>这里的几何属性主要有以下几种：</p>
+<p>构建完新的渲染树，浏览器又将此时的layout绘制到屏幕，这就是重绘。如果更改了除了几何属性之外的其他属性，浏览器会再次进行绘制，这个也是重绘。<br>如改变字体颜色，背景色等。有此处可以看出来，重排不定重绘，重绘未必重排。<span style="color:#ff0000">更正：重排必定重绘，重绘未必重排</span></p>
+<p>当重排影响到了与它相关的元素，导致整片区域发生了重排，这是回流。(个人理解，感觉这样解释更容易明白)。<br><span style="color:#ff0000">更正：重排，回流其本质是一个意思，只是在浏览器的内核中，叫法存在差异，具体请自行查看~~(ps:这样才能记住)</span><br>这里的几何属性主要有以下几种：</p>
 <pre><code>1. 添加元素或删除(removeChild，display:none)
 2. 元素位置改变
 3. 元素尺寸改变(盒模型)
