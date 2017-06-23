@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>啃一啃犀牛书--类型、值、变量 | 爬呀爬呀爬呀爬</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="啃一啃犀牛书–类型、值、变量">
+<meta property="og:type" content="article">
+<meta property="og:title" content="啃一啃犀牛书--类型、值、变量">
+<meta property="og:url" content="http://yoursite.com/2017/06/23/js-rhinoceros-section-3/index.html">
+<meta property="og:site_name" content="爬呀爬呀爬呀爬">
+<meta property="og:description" content="啃一啃犀牛书–类型、值、变量">
+<meta property="og:updated_time" content="2017-06-23T07:37:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="啃一啃犀牛书--类型、值、变量">
+<meta name="twitter:description" content="啃一啃犀牛书–类型、值、变量">
+  
+    <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xsqnr.com2.z0.glb.clouddn.com/title.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Web菜青虫</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/tags/样式天地">样式天地</a></li>
+				        
+							<li><a href="/tags/类库插件">类库插件</a></li>
+				        
+							<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+				        
+							<li><a href="/tags/文从心动">文从心动</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/文从心动/" style="font-size: 17.5px;">文从心动</a> <a href="/tags/样式天地/" style="font-size: 15px;">样式天地</a> <a href="/tags/类库插件/" style="font-size: 12.5px;">类库插件</a> <a href="/tags/脚本天堂/" style="font-size: 17.5px;">脚本天堂</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.52cik.com/">楼教主</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://springxiege.github.io/">心情</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://imochen.com/">墨尘</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.barretlee.com/">小胡子哥</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/lvdabao/">吕大豹</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://annn.me/">安总</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">纵使道路崎岖坎坷，我亦保持本心，勇往直前</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Web菜青虫</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Web菜青虫</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/样式天地">样式天地</a></li>
+		        
+					<li><a href="/tags/类库插件">类库插件</a></li>
+		        
+					<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+		        
+					<li><a href="/tags/文从心动">文从心动</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><style>
+    .gitment-header-container {
+        margin: 60px 0 !important;
+    }
+</style>
+<article id="post-js-rhinoceros-section-3" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/06/23/js-rhinoceros-section-3/" class="article-date">
+  	<time datetime="2017-06-23T06:42:51.000Z" itemprop="datePublished">2017-06-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      啃一啃犀牛书--类型、值、变量
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>啃一啃犀牛书–类型、值、变量<br><a id="more"></a></p>
+<h3 id="javascript-数据类型"><a href="#javascript-数据类型" class="headerlink" title="javascript 数据类型"></a>javascript 数据类型</h3><p>js的数据类型分为：原始类型和对象类型。</p>
+<p>原始类型：数字(number)，字符串(string)，布尔值(boolean)。<br>其中有两个特殊的原始值：null，undefined。<br>最后一个就是对象类型了。</p>
+<p>js的类型也可以按照是否拥有方法来分为可以拥有方法的类型，和不能拥有方法的类型。也可以分为可变类型和不可变类型。</p>
+<p>可否拥有方法：</p>
+<ul>
+<li>拥有方法:string，number，boolean,object</li>
+<li>不能拥有方法： undefined,null</li>
+</ul>
+<p>是否可变：</p>
+<ul>
+<li>可变类型： object(array)</li>
+<li>number,boolean,null,undefined,string</li>
+</ul>
+<p>下面针对每一个类型说一点可能注意不到的东西</p>
+<h3 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h3><h5 id="数字-number"><a href="#数字-number" class="headerlink" title="数字(number)"></a>数字(number)</h5><p>首先一定要注意，js是不区分整数值和浮点数值。js的所有数字均采用浮点数值表示。其采用IEEE 754标准定义的64位浮点格式表示数字。<br>主要说的是二进制浮点数和四舍五入的错误。</p>
+<p>你肯定见过这样的情况，在控制台输出。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0.1</span>+<span class="number">0.2</span>     <span class="comment">//   0.30000000000000004</span></span><br><span class="line"><span class="keyword">var</span> x = <span class="number">0.3</span><span class="number">-0.2</span>     <span class="comment">//   0.09999999999999998</span></span><br><span class="line"><span class="keyword">var</span> y = <span class="number">0.2</span><span class="number">-0.1</span>     <span class="comment">//   0.1</span></span><br><span class="line">y == z              <span class="comment">//   false</span></span><br></pre></td></tr></table></figure></p>
+<p>看官网的解释：</p>
+<blockquote>
+<p>由于舍入的误差，0.3和0.2之间的近似差值实际上并不等于0.2余0.1之间的近似差值。这个问题并不只在js中才会出现，理解这一点很重要：<br>在任何使用二进制浮点数的编程语言中都会有这个问题。同样需要注意的是，杉上述代码中x和y值非常接近彼此和最终的正确值。这种计算结果可以胜任大多数的计算任务：这个问题也只有在比较两个值<br>是否相等的时候才会出现。</p>
+</blockquote>
+<p>所以我们有时候遇见这样的操作一般都先乘以100，变成整数或者利用parseInt(),parseFloat()等方法拿到近似值。</p>
+<p>这里面还有一个比较好玩的，大家应该也都知道，在日期和实践Date()这个构造函数中，直接上代码好了：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> nowTime  =  <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">nowTime.getMonth()   <span class="comment">//这里面是从0开始算的，即1月是0，最大到11.</span></span><br></pre></td></tr></table></figure></p>
+<h5 id="字符串-string"><a href="#字符串-string" class="headerlink" title="字符串(string)"></a>字符串(string)</h5><p>字符串这里看起来并没有什么可以特别指出的，关于字符串的方法会单独列出来进行整理。<br>这里单独说一个关于字符串的隐式转换。(关于js的隐式转换挺多的，单独说一个，后面有章节专门针对这个来说)<br>平时我们可能获取到的是number类型的值，可能在某种情况下需要转成字符串类型，我们可以显示的调用toString()方法，也可以直接在后面  +’’;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var a = 111;</span><br><span class="line">var b = a.toString();</span><br><span class="line">var c = a + &apos;&apos;;</span><br><span class="line">b===c     //true</span><br></pre></td></tr></table></figure></p>
+<p>肯定大家都会~~~我就啰嗦一番好了。</p>
+<h5 id="布尔值-boolean"><a href="#布尔值-boolean" class="headerlink" title="布尔值(boolean)"></a>布尔值(boolean)</h5><p>布尔值应该跟字符串类似，觉得大家都应该很熟悉了，那就简单说两点，如何转换成布尔值。<br>如果调用Boolean()方法是直接可以返回boolean，那如果不这样做呢？<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="string">'true'</span>;</span><br><span class="line"><span class="keyword">var</span> b = <span class="built_in">Boolean</span>(a);</span><br><span class="line"><span class="keyword">var</span> c = a===<span class="string">'true'</span>;</span><br><span class="line">b===c       <span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
+<p>额，觉得貌似没有什么好玩的，算是换种思路吧，有时候你可能拿到的是字符串类型的，需要转换一下。</p>
+<h5 id="null-和-dundefined"><a href="#null-和-dundefined" class="headerlink" title="null 和 dundefined"></a>null 和 dundefined</h5><p>这个地方，真不知道是应该多说还是少说。看一个代码：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>                 <span class="comment">//object</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">undefined</span>            <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
+<p>从第一个返回结果来看，null还是对象了。确实，它是一个特殊的对象值，可以理解为”非对象”。<br>在我们有时候做判断的时候也需要注意一点：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span>               <span class="comment">//true</span></span><br><span class="line"><span class="literal">null</span> === <span class="literal">undefined</span>              <span class="comment">//false</span></span><br></pre></td></tr></table></figure></p>
+<p>我们经常利用这个来区分~</p>
+<h5 id="全局对象"><a href="#全局对象" class="headerlink" title="全局对象"></a>全局对象</h5><blockquote>
+<p>在代码的最顶级—-不在任何函数内的js代码—可以使用this来引用全局对象。</p>
+</blockquote>
+<p>在浏览器环境中，全局对象指的window，而在nodejs中全局对象指的global。</p>
+<h5 id="包装对象"><a href="#包装对象" class="headerlink" title="包装对象"></a>包装对象</h5><p>在看到这一章的时候，我也确实有点懵，名词真的是越来越多。看官方的解释好一点。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">'hello world'</span>;</span><br><span class="line"><span class="keyword">var</span> word = s.substring(s.indexOf(<span class="string">' '</span>)+<span class="number">1</span>,s.length);</span><br></pre></td></tr></table></figure></p>
+<p>这样的代码我们经常写，但是，字符串既然不是对象，为什么它会有属性呢？</p>
+<blockquote>
+<p>只要引用了字符串s的属性，js就会将字符串值通过调用new String(s)的方式转换成对象，这个对象继承了字符串的方法，并被用来处理属性的引用。<br>一旦属性引用结束，这个新创建的对象就会销毁(其实在实现上并不一定创建或者销毁这个临时对象，然而整个过程看起来像是这样)。</p>
+</blockquote>
+<p>这里面有坑！！！<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> s = <span class="string">'test'</span>;</span><br><span class="line">s.len = <span class="number">4</span>;</span><br><span class="line"><span class="keyword">var</span> t = s.len;          <span class="comment">//undefined</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>这段代码说明，在读取字符串，数字和布尔值的属性(或方法)的时候，表现的像对象一样。但如果你试图给其属性复制，则会忽略这个操作：<br>修改只是发生在临时对象上，而这个临时对象并未继续保留下来。</p>
+</blockquote>
+<p>这一章的很多东西，可能读起来枯燥无味，但是有些时候我们遇到的问题，恰恰就出现在这里，这一章可能只说了一半，但是其内容，也够我消化了。<br>我只是把里面我觉得可能会出错的地方或者不理解的地方摘了出来，如果你还想详细的了解，请移步《JavaScript权威指南》！</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/06/20/post-heart-1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">水文，水文</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'webcaiqingchong',
+            repo: 'gitmentRepo',
+            oauth: {
+                client_id: 'd801b2cd7ddf68b58b7c',
+                client_secret: '2cfcbf0d7038df0d9f5b395e75635787b330f279',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Web菜青虫
+    	</div>
+      	<div class="footer-right">
+      		一只爬行在前端道路上的菜青虫
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
