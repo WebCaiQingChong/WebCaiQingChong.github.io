@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>啃一啃犀牛书--表达式和运算符 | 爬呀爬呀爬呀爬</title>
+  <title>啃一啃犀牛书--表达式和运算符(1) | 爬呀爬呀爬呀爬</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="啃一啃犀牛书–表达式和运算符">
+  <meta name="description" content="啃一啃犀牛书–表达式和运算符(1)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="啃一啃犀牛书--表达式和运算符">
+<meta property="og:title" content="啃一啃犀牛书--表达式和运算符(1)">
 <meta property="og:url" content="http://yoursite.com/2017/07/03/js-rhinoceros-section-5/index.html">
 <meta property="og:site_name" content="爬呀爬呀爬呀爬">
-<meta property="og:description" content="啃一啃犀牛书–表达式和运算符">
-<meta property="og:updated_time" content="2017-07-03T07:22:54.000Z">
+<meta property="og:description" content="啃一啃犀牛书–表达式和运算符(1)">
+<meta property="og:updated_time" content="2017-07-06T08:24:00.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="啃一啃犀牛书--表达式和运算符">
-<meta name="twitter:description" content="啃一啃犀牛书–表达式和运算符">
+<meta name="twitter:title" content="啃一啃犀牛书--表达式和运算符(1)">
+<meta name="twitter:description" content="啃一啃犀牛书–表达式和运算符(1)">
   
     <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
   
@@ -239,7 +239,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      啃一啃犀牛书--表达式和运算符
+      啃一啃犀牛书--表达式和运算符(1)
     </h1>
   
 
@@ -259,7 +259,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>啃一啃犀牛书–表达式和运算符<br><a id="more"></a></p>
+        <p>啃一啃犀牛书–表达式和运算符(1)<br><a id="more"></a></p>
 <h5 id="对象和数组的初始化表达式"><a href="#对象和数组的初始化表达式" class="headerlink" title="对象和数组的初始化表达式"></a>对象和数组的初始化表达式</h5><p>这里面有一个地方需要注意:<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,];  <span class="comment">//[1,2,3]</span></span><br><span class="line"><span class="keyword">var</span> b = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,,<span class="number">5</span>];  <span class="comment">//[1,2,3,undefined,5]</span></span><br></pre></td></tr></table></figure></p>
 <p>列表逗号之间的元素省略，会填充undefined，但是末尾处不会。从这引申出一个知识点：我们一般定义数组是使用数组直接量的方法，但是我们也知道定义数组还可以使用构造函数的方法<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>);</span><br></pre></td></tr></table></figure></p>
 <p>这里面如果我们如下定义：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,);    <span class="comment">//等同于a = [1,2,3,]</span></span><br><span class="line"><span class="keyword">var</span> b = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>,<span class="number">2</span>,,<span class="number">4</span>);    <span class="comment">//会报错。Uncaught SyntaxError: Unexpected token ,</span></span><br></pre></td></tr></table></figure></p>
@@ -312,6 +312,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2017/07/06/js-rhinoceros-section-6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          啃一啃犀牛书--表达式和运算符(2)
+        
+      </div>
+    </a>
   
   
     <a href="/2017/06/27/js-rhinoceros-section-4/" id="article-nav-older" class="article-nav-link-wrap">
