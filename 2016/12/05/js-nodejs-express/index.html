@@ -23,9 +23,10 @@
     <link rel="icon" href="http://7xsqnr.com2.z0.glb.clouddn.com/title.jpg">
   
   <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/rainyday.js"></script>
 </head>
 
-<body>
+<body onload="run()">
   <div id="container">
     <div class="left-col">
     <div class="overlay"></div>
@@ -396,5 +397,21 @@ MathJax.Hub.Queue(function() {
 
 
   </div>
+  <img id="background" alt="background" src="" style="display:block;position: absolute;width: 100%;height: 100%;visibility: hidden;z-index:-1"/>
+  <script>
+    function run() {
+      var image = document.getElementById('background');
+      image.onload = function() {
+        var engine = new RainyDay({
+          image: this
+        });
+        engine.rain([ [1, 2, 8000] ]);
+        engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
+      };
+      image.crossOrigin = 'anonymous';
+//      image.src = 'http://7xsqnr.com1.z0.glb.clouddn.com/rainback.png';
+      image.src = 'http://i.imgur.com/VuX2Nf0.jpg';
+    }
+  </script>
 </body>
 </html>
