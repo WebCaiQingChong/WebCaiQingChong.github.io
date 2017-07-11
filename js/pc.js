@@ -16,18 +16,26 @@ define([], function(){
 			}
 		}
 	})();
-	var changeTitle = function(){
-		var localTitle = document.title;
-		window.onblur = function(){
-      document.title = '(๑•﹏•)你有freestyle吗';
-		}
-		window.onfocus = function(){
-      document.title = '♡ͥ (⁎❛⃘ੌ દ ❛⃘ੌ⁎)♡ᵕ̈*啵一个';
-      setTimeout(function(){
-        document.title = localTitle;
-			},2000)
-		}
-	}
+	//抄了楼教主的，哈哈
+  function visibilitychange() {
+    var titleTime;
+    var oldTitle = document.title;
+    // var shortcut = document.getElementById('shortcut');
+    
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        document.title = '(๑•﹏•)你有freestyle吗';
+        clearTimeout(titleTime);
+        // shortcut.href = 'images/fail.ico';
+      } else {
+        document.title = '♡ͥ (⁎❛⃘ੌ દ ❛⃘ੌ⁎)♡ᵕ̈*啵一个';
+        // shortcut.href = 'images/favicon.ico';
+        titleTime = setTimeout(function() {
+          document.title = oldTitle;
+        }, 2e3);
+      }
+    })
+  }
 	
 	var resetTags = function(){
 		var tags = $(".tagcloud a");
@@ -116,7 +124,7 @@ define([], function(){
 			resetTags();
 			bind();
 			run();
-      changeTitle();
+      visibilitychange();
 			Tips.init();
 		}
 	}
