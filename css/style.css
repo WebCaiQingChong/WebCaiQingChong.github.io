@@ -881,13 +881,6 @@ a {
 .article img {
   max-width: 100%;
 }
-.article:hover {
-  -webkit-transition: opacity 0.25s linear;
-  -moz-transition: opacity 0.25s linear;
-  -ms-transition: opacity 0.25s linear;
-  transition: opacity 0.25s linear;
-  opacity: 0.5;
-}
 @-webkit-keyframes cd-bounce-1 {
   0% {
     opacity: 0;
