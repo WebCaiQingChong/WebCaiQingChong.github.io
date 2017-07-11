@@ -33,7 +33,7 @@ require([], function (){
 	        };
 	    }()
 	}
-
+	
 	$(window).bind("resize", function(){
 		if(isMobileInit && isPCInit){
 			$(window).unbind("resize");

@@ -87,13 +87,23 @@ define([], function(){
 			Tips.hide();
 		});
 	}
-
-	
-
+  function run() {
+    var image = document.getElementById('background');
+    image.onload = function() {
+      var engine = new RainyDay({
+        image: this
+      });
+      engine.rain([ [1, 2, 200] ]);
+      engine.rain([ [3, 3, 0.88], [5, 5, 0.9], [6, 2, 1] ], 100);
+    };
+    image.crossOrigin = 'anonymous';
+    image.src = 'http://7xsqnr.com1.z0.glb.clouddn.com/cloud.jpg';
+  }
 	return {
 		init: function(){
 			resetTags();
 			bind();
+			run();
 			Tips.init();
 		}
 	}

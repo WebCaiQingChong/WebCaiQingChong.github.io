@@ -684,6 +684,30 @@ a {
 #header .header-nav .social a.mail:hover {
   border: 1px solid #006b98;
 }
+#header .header-nav .social a.weixin {
+  position: relative;
+  background: url("/img/weixin.png") center no-repeat #00ab04;
+  border: 1px solid #00ab04;
+}
+#header .header-nav .social a.weixin:hover {
+  border: 1px solid #00ab04;
+}
+#header .header-nav .social a.weixin:hover:before {
+  display: block;
+}
+#header .header-nav .social a.weixin:before {
+  content: "";
+  display: none;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: -36px;
+  top: 50px;
+  background: url("/img/erweima.jpg") center no-repeat;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
 #header .switch-part {
   width: 100%;
   position: absolute;
