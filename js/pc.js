@@ -16,7 +16,19 @@ define([], function(){
 			}
 		}
 	})();
-
+	var changeTitle = function(){
+		var localTitle = document.title;
+		window.onblur = function(){
+      document.title = '(๑•﹏•)你有freestyle吗';
+		}
+		window.onfocus = function(){
+      document.title = '♡ͥ (⁎❛⃘ੌ દ ❛⃘ੌ⁎)♡ᵕ̈*啵一个';
+      setTimeout(function(){
+        document.title = localTitle;
+			},2000)
+		}
+	}
+	
 	var resetTags = function(){
 		var tags = $(".tagcloud a");
 		tags.css({"font-size": "12px"});
@@ -104,6 +116,7 @@ define([], function(){
 			resetTags();
 			bind();
 			run();
+      changeTitle();
 			Tips.init();
 		}
 	}
