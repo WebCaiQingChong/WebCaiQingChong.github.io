@@ -752,7 +752,7 @@ a {
   margin: 0 30px;
   padding-right: 60px;
   border-bottom: 1px solid #eee;
-  background: #fff;
+  background: transparent;
 }
 .archives-wrap:first-child {
   margin-top: 30px;
@@ -1362,7 +1362,7 @@ a {
   margin: 0 30px;
   padding-right: 60px;
   border-bottom: 1px solid #eee;
-  background: #fff;
+  background: transparent;
 }
 .archives-wrap:first-child {
   margin-top: 30px;
