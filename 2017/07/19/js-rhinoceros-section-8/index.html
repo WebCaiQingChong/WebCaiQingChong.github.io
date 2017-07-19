@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>啃一啃犀牛书--对象 | 爬呀爬呀爬呀爬</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="啃一啃犀牛书–对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="啃一啃犀牛书--对象">
+<meta property="og:url" content="http://yoursite.com/2017/07/19/js-rhinoceros-section-8/index.html">
+<meta property="og:site_name" content="爬呀爬呀爬呀爬">
+<meta property="og:description" content="啃一啃犀牛书–对象">
+<meta property="og:updated_time" content="2017-07-19T03:54:39.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="啃一啃犀牛书--对象">
+<meta name="twitter:description" content="啃一啃犀牛书–对象">
+  
+    <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xsqnr.com2.z0.glb.clouddn.com/title.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/rainyday.js"></script>
+  <style>
+    .gitment-header-container {
+      margin: 60px 0 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Web菜青虫</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/tags/样式天地">样式天地</a></li>
+				        
+							<li><a href="/tags/类库插件">类库插件</a></li>
+				        
+							<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+				        
+							<li><a href="/tags/文从心动">文从心动</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/6272520800/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+					        
+								<a class="weixin" target="_blank" href="javascript:void(0)" title="weixin">weixin</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cai-qing-chong-32-50/activities" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/文从心动/" style="font-size: 16.67px;">文从心动</a> <a href="/tags/样式天地/" style="font-size: 13.33px;">样式天地</a> <a href="/tags/类库插件/" style="font-size: 10px;">类库插件</a> <a href="/tags/脚本天堂/" style="font-size: 16.67px;">脚本天堂</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.52cik.com/">楼教主</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://springxiege.github.io/">心情</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://imochen.com/">墨尘</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.barretlee.com/">小胡子哥</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/lvdabao/">吕大豹</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://annn.me/">安总</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.imzmx.win/">老张</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">纵使道路崎岖坎坷，我亦保持本心，勇往直前</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Web菜青虫</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Web菜青虫</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/样式天地">样式天地</a></li>
+		        
+					<li><a href="/tags/类库插件">类库插件</a></li>
+		        
+					<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+		        
+					<li><a href="/tags/文从心动">文从心动</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/6272520800/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+			        
+						<a class="weixin" target="_blank" href="javascript:void(0)" title="weixin">weixin</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cai-qing-chong-32-50/activities" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-js-rhinoceros-section-8" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/07/19/js-rhinoceros-section-8/" class="article-date">
+  	<time datetime="2017-07-19T01:18:00.000Z" itemprop="datePublished">2017-07-19</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      啃一啃犀牛书--对象
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>啃一啃犀牛书–对象<br><a id="more"></a><br>本次断更一个星期，真的惭愧。连更两章进行补偿~~</p>
+<h3 id="对象定义"><a href="#对象定义" class="headerlink" title="对象定义"></a>对象定义</h3><p>对象可以看做是属性的无序集合，每个属性都是一个名/值对。也可以说是可变的键控集合。当然这里要说一下null，这个也是对象，但是跟前面的命名有点差异，这个可以理解为空对象。</p>
+<h3 id="创建对象"><a href="#创建对象" class="headerlink" title="创建对象"></a>创建对象</h3><p>我们经常使用的创建对象的方法应该是对象直接量(对象字面量)：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;&#125;;</span><br></pre></td></tr></table></figure></p>
+<p>另一种创建对象的方法就是通过new运算符来进行对象的创建，我们通常也称构造函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var obj = new Object();</span><br></pre></td></tr></table></figure></p>
+<p>但是在蝴蝶书中，将new运算符划归为糟粕里面了，解释如下：</p>
+<blockquote>
+<p>javascript的new运算符创建一个继承于其运算符的原型的新对象，然后调用该运算符，把新建的对象绑定给this。这给运算数(它应该是一个构造函数)一个机会<br>在返回给请求者前自定义新创建的对象。</p>
+<p>如果你忘记了使用new运算符，你得到的就是一个普通的函数调用，并且this被绑定到全局对象，而不是这个新创建的对象。这意味着当你的函数尝试去初始化新成员属性时<br>它将会污染全局变量。这是一件非常糟糕的事情。而且既没有编译时警告，也没有运行时警告。</p>
+</blockquote>
+<p>综上来看，其实主要也是自己的错误，但是人总会犯错，想从根源上来解决问题，那就是不用new。(也看个人习惯喽)<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">car</span>(<span class="params">name, type</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.type = type;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> <span class="keyword">new</span> = <span class="keyword">new</span> Car(<span class="string">'aodi'</span>,<span class="string">'small'</span>)</span><br></pre></td></tr></table></figure></p>
+<p>我们当然也可以使用Object.create()方法进行对象的创建。<br>Object.create()接收两个参数，第一个参数是这个对象的原形，第二个参数为可选参数,该参数对象是一组属性与值，该对象的属性名称将是新创建的对象的属性名称。<br>接下来通过对比的方式来进行解释会更容易理解一点：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//对象创建</span></span><br><span class="line"><span class="keyword">var</span> o = &#123;&#125;;</span><br><span class="line"><span class="keyword">var</span> o = <span class="keyword">new</span> <span class="built_in">Object</span>();</span><br><span class="line"><span class="keyword">var</span> o = <span class="built_in">Object</span>.create(&#123;&#125;);</span><br><span class="line"><span class="keyword">var</span> o = <span class="built_in">Object</span>.create(<span class="built_in">Object</span>.prototype);</span><br><span class="line"><span class="comment">//以上的定义都是一致的，创建了一个新的对象，该对象可继承原型上的一些方法，比如toString();</span></span><br><span class="line"><span class="keyword">var</span> p = <span class="built_in">Object</span>.create(<span class="literal">null</span>);</span><br><span class="line"><span class="comment">//通过传入null来创建一个没有原型的对象，原型上的所有方法都不会继承。</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="属性的查询与设置"><a href="#属性的查询与设置" class="headerlink" title="属性的查询与设置"></a>属性的查询与设置</h3><p>这个应该前面有说过，我们可以通过”.”或者”[]”运算符来获取或设置属性的值。在ECMAscript3中，点运算符后的标识符不能是保留字。(ps:我们在命名一些属性的时候，其实从根本上也不建议命名与保留字冲突)<br>此时我们应使用方括号来进行访问。严格来讲，方括号也是有一点限制的，方括号内的表达式必须返回字符串或者返回一个可以转换为字符串的值。这一点可以很好的解释es6中的属性名表达式。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> key = <span class="string">'foo'</span>;</span><br><span class="line"><span class="keyword">var</span> obj = &#123;</span><br><span class="line">    [key]:<span class="literal">true</span>,</span><br><span class="line">    [<span class="string">'a'</span>+<span class="string">'bc'</span>]: <span class="number">222</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>这里面的属性名都是用表达式的方式来定义的，它们都遵循上面的规则，返回字符串或者可以转为字符串的值。但是这里一定要注意一点，加入你的属性名的表达式是一个对象，<br>那么它将返回[object Object]。(对象里面的方法亦可如此)</p>
+<h5 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h5><p>js对象具有”自有属性”，也有一些属性是从原型对象继承而来的。</p>
+<blockquote>
+<p>假设要查询对象o的属性x，如果o中不存在x，那么将会继续在o的原型对象中查询属性x。如果原型对象中也没有x，但这个原型对象也有原型，那么继续在这个原型对象的原型上执行查询，直到找到x或者查找到一个原型为null的对象为止。<br>可以看到，对象的原型属性构成了一个”链”(原型链)，通过这个”链”可是实现属性的继承。</p>
+</blockquote>
+<p>在js的对象操作中，只有查询属性时才会体会到继承的存在，而设置属性和继承无关。</p>
+<h3 id="属性访问错误"><a href="#属性访问错误" class="headerlink" title="属性访问错误"></a>属性访问错误</h3><p>我们可能经常看到这样的错误：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o = <span class="literal">undefined</span>;</span><br><span class="line"><span class="built_in">console</span>.log(o.x);</span><br><span class="line"><span class="comment">//Uncaught TypeError: Cannot read property 'x' of undefined</span></span><br></pre></td></tr></table></figure></p>
+<p>这和如果o存在但是o没有x可是不一样的哦~对于基础的开发中，经常出现的问题可能是在我们获取数据之后，我们来渲染视图的时候出现，<br>如果后端返回异常，可能就导致我们的js代码报错。这个时候我们可都是要先判断这个对象是否存在的哦~~</p>
+<h3 id="删除属性"><a href="#删除属性" class="headerlink" title="删除属性"></a>删除属性</h3><p>在前面说运算符的时候已经说过了delete运算符，delete运算符可以删除对象的属性。</p>
+<h3 id="检测属性"><a href="#检测属性" class="headerlink" title="检测属性"></a>检测属性</h3><p>我们可以通过in运算符、hasOwnpreperty()和propertyIsEnumerable()方法来完成这个工作，或者仅通过属性查询也可以做到这一点。</p>
+<ul>
+<li>in运算符</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = &#123;x:<span class="number">1</span>&#125;;</span><br><span class="line"><span class="string">"x"</span> <span class="keyword">in</span> obj;             <span class="comment">//true,x是o的属性</span></span><br><span class="line"><span class="string">"y"</span> <span class="keyword">in</span> obj;             <span class="comment">//false，y不是o的属性</span></span><br><span class="line"><span class="string">"toString"</span> <span class="keyword">in</span> obj;      <span class="comment">//true，o继承toString</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>hasOwnProperty()  检测给定的名字是否是对象的自有属性，继承属性也会返回false。</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o  = &#123;x:<span class="number">1</span>&#125;;</span><br><span class="line">o.hasOwnProperty(<span class="string">'x'</span>);              <span class="comment">//true,o有一个自有属性x</span></span><br><span class="line">o.hasOwnProperty(<span class="string">'y'</span>);              <span class="comment">//false，o不存在属性y</span></span><br><span class="line">o.hasOwnProperty(<span class="string">'toString'</span>);       <span class="comment">//false，toString是继承属性，并不是自有属性</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>propertyIsEnumerable() 是hasOwnProperty()的增强版，只有检测到是自有属性且这个属性是可枚举性为true时才返回true。(某些内置属性是不可枚举的。通常有js代码创建的属性都是可枚举的)</li>
+</ul>
+<p>当然，我们在平时的代码中经常会用是否存在来判断，即检测属性。但是在有些时候并不是非常完美的适用。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> o = &#123;x: <span class="number">1</span>&#125;;</span><br><span class="line">o.x !== <span class="literal">undefined</span>;              <span class="comment">//true</span></span><br><span class="line">o.y !== <span class="literal">undefined</span>;              <span class="comment">//false</span></span><br><span class="line">o.toString !== <span class="literal">undefined</span>;       <span class="comment">//true</span></span><br><span class="line"><span class="comment">//如果o中的x的值本身就是undefined的话，上面的检测就变得没有意义了。</span></span><br><span class="line"><span class="comment">//这个时候我们就使用in运算符来区分不存在的属性，和存在但值为undefined的属性。</span></span><br><span class="line"><span class="keyword">var</span> o = &#123;x:<span class="literal">undefined</span>&#125;;</span><br><span class="line">o.x !== <span class="literal">undefined</span>;      <span class="comment">//false</span></span><br><span class="line"><span class="string">"x"</span> <span class="keyword">in</span> o ;              <span class="comment">//true</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="枚举属性"><a href="#枚举属性" class="headerlink" title="枚举属性"></a>枚举属性</h3><p>一般可枚举的属性都是我们通过js代码给对象所赋值的属性，一些内置方法一般为不可枚举。<br>js本身提供了函数来获取对象的可枚举属性，Object.keys(),返回一个数组，数组内的元素是该对象可枚举的自由属性的集合。</p>
+<p>本章先介绍到这里~(ps:后面介绍的getter,setter等，但是平时用的很少，自己先过一遍之后再来分享喽~)</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/10/js-rhinoceros-section-7/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">啃一啃犀牛书--语句</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'webcaiqingchong',
+            repo: 'gitmentRepo',
+            oauth: {
+                client_id: 'd801b2cd7ddf68b58b7c',
+                client_secret: '2cfcbf0d7038df0d9f5b395e75635787b330f279',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Web菜青虫
+    	</div>
+      	<div class="footer-right">
+      		一只爬行在前端道路上的菜青虫
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+  <img id="background" alt="background" src="" style="display:block;position: absolute;width: 100%;height: 100%;visibility: hidden;z-index:-1"/>
+</body>
+</html>
