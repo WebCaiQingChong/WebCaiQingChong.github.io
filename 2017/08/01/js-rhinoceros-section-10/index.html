@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>啃一啃犀牛书--数组(1) | 爬呀爬呀爬呀爬</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="啃一啃犀牛书–数组(1)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="啃一啃犀牛书--数组(1)">
+<meta property="og:url" content="http://yoursite.com/2017/08/01/js-rhinoceros-section-10/index.html">
+<meta property="og:site_name" content="爬呀爬呀爬呀爬">
+<meta property="og:description" content="啃一啃犀牛书–数组(1)">
+<meta property="og:updated_time" content="2017-08-01T02:18:54.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="啃一啃犀牛书--数组(1)">
+<meta name="twitter:description" content="啃一啃犀牛书–数组(1)">
+  
+    <link rel="alternative" href="/atom.xml" title="爬呀爬呀爬呀爬" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xsqnr.com2.z0.glb.clouddn.com/title.jpg">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/rainyday.js"></script>
+  <style>
+    .gitment-header-container {
+      margin: 60px 0 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Web菜青虫</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/tags/样式天地">样式天地</a></li>
+				        
+							<li><a href="/tags/类库插件">类库插件</a></li>
+				        
+							<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+				        
+							<li><a href="/tags/文从心动">文从心动</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/6272520800/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+					        
+								<a class="weixin" target="_blank" href="javascript:void(0)" title="weixin">weixin</a>
+					        
+								<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cai-qing-chong-32-50/activities" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/css/" style="font-size: 10px;">css</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/文从心动/" style="font-size: 17.5px;">文从心动</a> <a href="/tags/样式天地/" style="font-size: 12.5px;">样式天地</a> <a href="/tags/类库插件/" style="font-size: 10px;">类库插件</a> <a href="/tags/脚本天堂/" style="font-size: 15px;">脚本天堂</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.52cik.com/">楼教主</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://springxiege.github.io/">心情</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="https://imochen.com/">墨尘</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.barretlee.com/">小胡子哥</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.cnblogs.com/lvdabao/">吕大豹</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://annn.me/">安总</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://www.imzmx.win/">老张</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">纵使道路崎岖坎坷，我亦保持本心，勇往直前</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Web菜青虫</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="http://7xsqnr.com2.z0.glb.clouddn.com/autor.gif" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Web菜青虫</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">一只爬行在前端道路上的菜青虫</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/tags/样式天地">样式天地</a></li>
+		        
+					<li><a href="/tags/类库插件">类库插件</a></li>
+		        
+					<li><a href="/tags/脚本天堂">脚本天堂</a></li>
+		        
+					<li><a href="/tags/文从心动">文从心动</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/WebCaiQingChong" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/6272520800/profile?topnav=1&wvr=6&is_all=1" title="weibo">weibo</a>
+			        
+						<a class="weixin" target="_blank" href="javascript:void(0)" title="weixin">weixin</a>
+			        
+						<a class="zhihu" target="_blank" href="https://www.zhihu.com/people/cai-qing-chong-32-50/activities" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-js-rhinoceros-section-10" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/08/01/js-rhinoceros-section-10/" class="article-date">
+  	<time datetime="2017-08-01T02:05:34.000Z" itemprop="datePublished">2017-08-01</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      啃一啃犀牛书--数组(1)
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>啃一啃犀牛书–数组(1)<br><a id="more"></a><br>数组是我们经常使用到的数据结构。数组的定义：值的有序集合。</p>
+<h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> arr = [];                       <span class="comment">// []</span></span><br><span class="line"><span class="keyword">var</span> newArr = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">5</span>);          <span class="comment">// [undefined,undefined,undefined,undefined,undefined]</span></span><br><span class="line"><span class="keyword">var</span> arr4 = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>];               <span class="comment">// [1,2,3,4]</span></span><br><span class="line"><span class="keyword">var</span> arr4n = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>);     <span class="comment">// [1,2,3,4]</span></span><br><span class="line"><span class="keyword">var</span> arr3 = [,,,];                   <span class="comment">// [undefined,undefined,undefined]</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>数组直接量的语法允许有可选的结尾逗号</p>
+</blockquote>
+<h3 id="数组的读写"><a href="#数组的读写" class="headerlink" title="数组的读写"></a>数组的读写</h3><p>数组的读写使用”[]”操作符。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>];</span><br><span class="line"><span class="keyword">var</span> val = a[<span class="number">0</span>];</span><br><span class="line">a[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line"><span class="keyword">var</span> i = <span class="number">3</span>;</span><br><span class="line">a[i] = <span class="number">4</span>;</span><br></pre></td></tr></table></figure></p>
+<h3 id="稀疏数组"><a href="#稀疏数组" class="headerlink" title="稀疏数组"></a>稀疏数组</h3><p>稀疏数组就是包含从0开始的不连续索引的数组。我们可以使用Array()构造函数或者简单的指定数组的索引大于当前数组的长度来创建稀疏数组。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">5</span>);</span><br><span class="line"><span class="keyword">var</span> b = [];</span><br><span class="line">b[<span class="number">5</span>] = <span class="number">1</span>;</span><br></pre></td></tr></table></figure></p>
+<p>也可使用delete操作符来产生稀疏数组。</p>
+<blockquote>
+<p>足够稀疏的数组通常在实现上比稠密的数组更慢，内存利用率更高，在这样的数组中查找元素的时间<br>与常规的对象属性的查找时间一样长。</p>
+</blockquote>
+<p>在权威指南上有一个错误，如下：<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a1 = [,,,];</span><br><span class="line"><span class="keyword">var</span> a2 = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>);</span><br><span class="line"><span class="number">0</span> <span class="keyword">in</span> a1             <span class="comment">// =&gt;true    这里是错误的，这里得到的是false</span></span><br><span class="line"><span class="number">0</span> <span class="keyword">in</span> a2             <span class="comment">// =&gt;false</span></span><br><span class="line"><span class="keyword">var</span> a3 = [<span class="literal">undefined</span>,<span class="literal">undefined</span>,<span class="literal">undefined</span>]</span><br><span class="line"><span class="number">0</span> <span class="keyword">in</span> a3             <span class="comment">//true      a3[0]处有一个元素，该元素为undefined。</span></span><br></pre></td></tr></table></figure></p>
+<p>第三行，其实这里的a1与a2是近似相等的，他们的长度是3，但是里面的被插入的值缺都是不存在，这里并不等同于undefined。<br>在浏览器的验证 第三行也是错误的。</p>
+<h3 id="数组长度"><a href="#数组长度" class="headerlink" title="数组长度"></a>数组长度</h3><p>这个大家应该都最熟悉不错了。数组的length属性。</p>
+<h3 id="数组元素的添加和删除"><a href="#数组元素的添加和删除" class="headerlink" title="数组元素的添加和删除"></a>数组元素的添加和删除</h3><p>添加元素的最简单的方法，为新索引赋值。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [];</span><br><span class="line">a[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">a[<span class="number">1</span>] = <span class="number">2</span>;</span><br><span class="line"><span class="comment">//也可是使用push方法进行元素添加</span></span><br><span class="line"><span class="keyword">var</span> b = [];</span><br><span class="line">b.push(<span class="number">1</span>);</span><br><span class="line">b.push(<span class="number">2</span>);</span><br><span class="line">b,push(<span class="number">3</span>,<span class="number">4</span>);</span><br></pre></td></tr></table></figure></p>
+<p>一些数组的方法会专门提出一章进行说明，也会包含es6里面一些数组新增的方法。</p>
+<p>删除数组的元素，我们可以使用delete操作符。delete操作符删除元素，并不会改变数组的length属性，也就是不会改变数组的<br>长度，在删除的位置上会产生空位，使原来的数组变成稀疏数组。当然，我们也可以直接改变数组的长度来进行删除，但是这个在有些时候是不可控的。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>];</span><br><span class="line"><span class="comment">//删除最后一个</span></span><br><span class="line"><span class="keyword">delete</span> a[a.length<span class="number">-1</span>];           <span class="comment">//数组的长度不会改变</span></span><br><span class="line">a.length = a.length - <span class="number">1</span>;        <span class="comment">//直接改变数组的长度</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="数组遍历"><a href="#数组遍历" class="headerlink" title="数组遍历"></a>数组遍历</h3><p>我们一般使用for循环，或者for/in 循环进行数组的遍历。<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt; array.length;i++)&#123;</span><br><span class="line">    <span class="comment">//执行具体的逻辑</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">var</span> index <span class="keyword">in</span> array)&#123;</span><br><span class="line">    <span class="comment">//这里的index指array的属性值，在数组中，属性值即为索引(下标)</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="多维数组"><a href="#多维数组" class="headerlink" title="多维数组"></a>多维数组</h3><p>js不支持真正的多维数组，但可以用数组的数组来近似。如果是二维数组，想当问某个元素，使用两次”[]”即可。这里的<br>多维数组也类似与点阵，如果你写过canvas或者其他的图形学的知识，你会发现多维数组的应用还是不错的。</p>
+<p>本章先到这里，下一章主要内容是数组的方法，篇幅应该不会短，毕竟数组的方法其实也挺多的~~</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/07/28/js-rhinoceros-section-9/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">啃一啃犀牛书--对象(2)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+
+
+<section class="comments" id="comments">
+    <div id="gitment_thread"></div>
+    <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+    <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    <script>
+        var gitment = new Gitment({
+            owner: 'webcaiqingchong',
+            repo: 'gitmentRepo',
+            oauth: {
+                client_id: 'd801b2cd7ddf68b58b7c',
+                client_secret: '2cfcbf0d7038df0d9f5b395e75635787b330f279',
+            },
+        })
+        gitment.render('comments')
+    </script>
+</section>
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 Web菜青虫
+    	</div>
+      	<div class="footer-right">
+      		一只爬行在前端道路上的菜青虫
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+  <img id="background" alt="background" src="" style="display:block;position: absolute;width: 100%;height: 100%;visibility: hidden;z-index:-1"/>
+</body>
+</html>
